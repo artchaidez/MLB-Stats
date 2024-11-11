@@ -36,4 +36,32 @@ a {
         color: white;
     }
 
+    .table {
+        color: white;
+    }
+
+    thead {
+        background-color: green;
+    }
+
+    tbody tr:hover {
+        background-color: rgb(152, 151, 151);
+    }
+
+    thead th:hover {
+        color:gray;
+    }
+
+    thead th.active {
+        color:green;
+    }
+
+    thead th.active {
+        color: white;
+    }
+
+    tbody td.active {
+        color: green;
+    }
+
 }

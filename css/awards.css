@@ -25,6 +25,7 @@
     background-color: green;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     cursor: pointer;
+    color: white;
 }
 
 .collapse-title {
@@ -32,6 +33,7 @@
 }
 
 .collapse-icon {
+    color: white;
     transition: transform var(--transition-ms);
 }
 
