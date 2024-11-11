@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.4rem;
+    background-color: orange;
+    padding: 0.6rem;
+}
+
+a {
+    text-decoration: none;
+    color:black
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (prefers-color-scheme:dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+}
