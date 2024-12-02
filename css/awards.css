@@ -1,10 +1,17 @@
+.award-type-header {
+    max-width: 85%;
+    margin: 1.2em auto;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
 .collapse {
     --xy-padding: 14px;
     --border-radius: 6px;
     --transition-ms: 0.3s;
 
     max-width: 85%;
-    margin: 1rem auto;
+    margin: 1em auto;
     font-size: 16px;
 }
 
@@ -54,7 +61,40 @@
     transition: grid-template-rows var(--transition-ms) ease-out;
 }
 
-p {
-    padding: 1em;
+.mvp-table {
+    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 95%;
 }
+
+th, td {
+    padding: .2rem;
+    border: 1px solid;
+    text-align: center;
+}
+
+.dodger-primary {
+    background-color: #1e90ff;
+}
+
+.yankee-primary {
+    background-color: #003087;
+}
+
+.braves-primary {
+    background-color: #CE1141;
+}
+
+.tigers-primary {
+    background-color: #0C2340;
+}
+
+.pirates-primary {
+    background-color: #27251F;
+}
+
+
 
