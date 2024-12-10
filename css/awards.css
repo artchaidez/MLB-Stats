@@ -76,6 +76,10 @@ th, td {
     text-align: center;
 }
 
+th {
+    color: white
+}
+
 .dodger-primary {
     background-color: #1e90ff;
 }
@@ -96,5 +100,10 @@ th, td {
     background-color: #27251F;
 }
 
-
+@media screen and (max-width: 1080px){
+    th:not(:nth-child(1), :nth-child(2),:nth-child(14)),
+    td:not(:nth-child(1), :nth-child(2), :nth-child(14)) {
+        display: none;
+    }
+}
 
