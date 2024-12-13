@@ -100,10 +100,36 @@ th {
     background-color: #27251F;
 }
 
+.one-chart-wrapper {
+    align-items: center;
+    width: 100%;
+    padding: 25px 50px 50px 50px;
+}
+
+.two-chart-wrapper {
+    display: flex;
+    align-items: center;
+    width: 45%;
+} 
+
+.chart-pie {
+    padding: 10px 50px 50px 50px;
+}
+
 @media screen and (max-width: 1080px){
     th:not(:nth-child(1), :nth-child(2),:nth-child(14)),
     td:not(:nth-child(1), :nth-child(2), :nth-child(14)) {
         display: none;
+    }
+
+    .two-chart-wrapper {
+        display: block;
+        align-items: center;
+        width: 100%;
+    } 
+
+    .chart-bar {
+        margin-bottom: 20px;
     }
 }
 

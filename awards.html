@@ -1,323 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/awards.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/awards.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>League Leaders</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <header>
-        <nav class="nav-list">
-            <ul class="list">
-                <li class="nav-item"><a href="/awards.html">Awards</a></li>
-                <li class="nav-item"><a href="/leaders.html">Leaders</a></li>
-                <li class="nav-item"><a href="">Prospects</a></li>
-            </ul>
-        </nav>
+      <nav class="nav-list">
+        <ul class="list">
+          <li class="nav-item"><a href="/awards.html">Awards</a></li>
+          <li class="nav-item"><a href="/leaders.html">Leaders</a></li>
+          <li class="nav-item"><a href="">Prospects</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="award-type-header">
-        MVP Award Winners
+    <div class="award-type-header">MVP Award Winners</div>
+
+    <div class="collapse">
+      <div class="collapse-header dodger-primary">
+        <span class="collapse-title">Shohei Ohtani- Los Angeles Dodgers</span>
+        <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      </div>
+      <div class="collapse-content-wrapper">
+        <div class="collapse-content">
+          <table class="mvp-table">
+            <thead class="dodger-primary">
+              <tr>
+                <th>G</th>
+                <th>PA</th>
+                <th>HR</th>
+                <th>RBI</th>
+                <th>SB</th>
+                <th>BB%</th>
+                <th>K%</th>
+                <th>AVG</th>
+                <th>OBP</th>
+                <th>SLG</th>
+                <th>wRC+</th>
+                <th>BsR</th>
+                <th>Def</th>
+                <th>fWAR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>159</td>
+              <td>731</td>
+              <td>54</td>
+              <td>130</td>
+              <td>59</td>
+              <td>11.1%</td>
+              <td>22.2%</td>
+              <td>.310</td>
+              <td>.390</td>
+              <td>.646</td>
+              <td>181</td>
+              <td>9.8</td>
+              <td>-17.2</td>
+              <td>9.1</td>
+            </tbody>
+          </table>
+          <div class="one-chart-wrapper">
+            <canvas class="chart-bar" id="ohtani-bar"></canvas>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="collapse">
-        <div class="collapse-header dodger-primary">
-            <span class="collapse-title">Shohei Ohtani- Los Angeles Dodgers</span>
-            <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      <div class="collapse-header yankee-primary">
+        <span class="collapse-title">Aaron Judge - New York Yankees</span>
+        <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      </div>
+      <div class="collapse-content-wrapper">
+        <div class="collapse-content">
+          <table class="mvp-table">
+            <thead class="yankee-primary">
+              <tr>
+                <th>G</th>
+                <th>PA</th>
+                <th>HR</th>
+                <th>RBI</th>
+                <th>SB</th>
+                <th>BB%</th>
+                <th>K%</th>
+                <th>AVG</th>
+                <th>OBP</th>
+                <th>SLG</th>
+                <th>wRC+</th>
+                <th>BsR</th>
+                <th>Def</th>
+                <th>fWAR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>158</td>
+              <td>704</td>
+              <td>58</td>
+              <td>144</td>
+              <td>10</td>
+              <td>18.9%</td>
+              <td>24.3%</td>
+              <td>.322</td>
+              <td>.458</td>
+              <td>.701</td>
+              <td>218</td>
+              <td>-0.4</td>
+              <td>-9.9</td>
+              <td>11.2</td>
+            </tbody>
+          </table>
+          <div class="one-chart-wrapper">
+            <canvas class="chart-bar" id="judge-bar"></canvas>
+          </div>
         </div>
-        <div class="collapse-content-wrapper">
-            <div class="collapse-content">
-                <table class="mvp-table">
-                    <thead class="dodger-primary">
-                        <tr>
-                            <th>G</th>
-                            <th>PA</th>
-                            <th>HR</th>
-                            <th>RBI</th>
-                            <th>SB</th>
-                            <th>BB%</th>
-                            <th>K%</th>
-                            <th>AVG</th>
-                            <th>OBP</th>
-                            <th>SLG</th>
-                            <th>wRC+</th>
-                            <th>BsR</th>
-                            <th>Def</th>
-                            <th>fWAR</th>
-                          </tr>
-                    </thead>
-                    <tbody >
-                        <td>159</td>
-                        <td>731</td>
-                        <td>54</td>
-                        <td>130</td>
-                        <td>59</td>
-                        <td>11.1%</td>
-                        <td>22.2%</td>
-                        <td>.310</td>
-                        <td>.390</td>
-                        <td>.646</td>
-                        <td>181</td>
-                        <td>9.8</td>
-                        <td>-17.2</td>
-                        <td>9.1</td>
-                    </tbody>
-                </table>
-            </div>
+      </div>
+    </div>
+
+    <div class="award-type-header">Cy Young Award Winners</div>
+
+    <div class="collapse">
+      <div class="collapse-header braves-primary">
+        <span class="collapse-title">Chris Sale - Atlanta Braves</span>
+        <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      </div>
+      <div class="collapse-content-wrapper">
+        <div class="collapse-content">
+          <table class="mvp-table">
+            <thead class="braves-primary">
+              <tr>
+                <th>G</th>
+                <th>QS</th>
+                <th>W</th>
+                <th>L</th>
+                <th>IP</th>
+                <th>SO</th>
+                <th>K%</th>
+                <th>BB%</th>
+                <th>GB%</th>
+                <th>ERA</th>
+                <th>xERA</th>
+                <th>FIP</th>
+                <th>xFIP</th>
+                <th>fWAR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>29</td>
+              <td>18</td>
+              <td>18</td>
+              <td>3</td>
+              <td>177.2</td>
+              <td>225</td>
+              <td>32.1%</td>
+              <td>5.6%</td>
+              <td>44.8%</td>
+              <td>2.38</td>
+              <td>2.79</td>
+              <td>2.09</td>
+              <td>2.64</td>
+              <td>6.4</td>
+            </tbody>
+          </table>
+          <div class="two-chart-wrapper">
+            <canvas class="chart-pie" id="sale-pie"></canvas>
+            <canvas class="chart-bar" id="sale-bar"></canvas>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="collapse">
-        <div class="collapse-header yankee-primary">
-            <span class="collapse-title">Aaron Judge - New York Yankees</span>
-            <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      <div class="collapse-header tigers-primary">
+        <span class="collapse-title">Tarik Skubal - Detroit Tigers</span>
+        <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      </div>
+      <div class="collapse-content-wrapper">
+        <div class="collapse-content">
+          <table class="mvp-table">
+            <thead class="tigers-primary">
+              <tr>
+                <th>G</th>
+                <th>QS</th>
+                <th>W</th>
+                <th>L</th>
+                <th>IP</th>
+                <th>SO</th>
+                <th>K%</th>
+                <th>BB%</th>
+                <th>GB%</th>
+                <th>ERA</th>
+                <th>xERA</th>
+                <th>FIP</th>
+                <th>xFIP</th>
+                <th>fWAR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>31</td>
+              <td>22</td>
+              <td>18</td>
+              <td>4</td>
+              <td>192.0</td>
+              <td>228</td>
+              <td>30.3%</td>
+              <td>4.6%</td>
+              <td>45.7%</td>
+              <td>2.39</td>
+              <td>2.68</td>
+              <td>2.49</td>
+              <td>2.83</td>
+              <td>5.1</td>
+            </tbody>
+          </table>
+          <div class="two-chart-wrapper">
+            <canvas class="chart-pie" id="skubal-pie"></canvas>
+            <canvas class="chart-bar" id="skubal-bar"></canvas>
+          </div>
         </div>
-        <div class="collapse-content-wrapper">
-            <div class="collapse-content">
-                <table class="mvp-table">
-                    <thead class="yankee-primary">
-                        <tr>
-                            <th>G</th>
-                            <th>PA</th>
-                            <th>HR</th>
-                            <th>RBI</th>
-                            <th>SB</th>
-                            <th>BB%</th>
-                            <th>K%</th>
-                            <th>AVG</th>
-                            <th>OBP</th>
-                            <th>SLG</th>
-                            <th>wRC+</th>
-                            <th>BsR</th>
-                            <th>Def</th>
-                            <th>fWAR</th>
-                          </tr>
-                    </thead>
-                    <tbody >
-                        <td>158</td>
-                        <td>704</td>
-                        <td>58</td>
-                        <td>144</td>
-                        <td>10</td>
-                        <td>18.9%</td>
-                        <td>24.3%</td>
-                        <td>.322</td>
-                        <td>.458</td>
-                        <td>.701</td>
-                        <td>218</td>
-                        <td>-0.4</td>
-                        <td>-9.9</td>
-                        <td>11.2</td>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <div class="award-type-header">
-        Cy Young Award Winners
+    <div class="award-type-header">Rookie of the Year Award Winners</div>
+
+    <div class="collapse">
+      <div class="collapse-header pirates-primary">
+        <span class="collapse-title">Paul Skenes - Pittsburgh Pirates</span>
+        <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      </div>
+      <div class="collapse-content-wrapper">
+        <div class="collapse-content">
+          <table class="mvp-table">
+            <thead class="pirates-primary">
+              <tr>
+                <th>G</th>
+                <th>QS</th>
+                <th>W</th>
+                <th>L</th>
+                <th>IP</th>
+                <th>SO</th>
+                <th>K%</th>
+                <th>BB%</th>
+                <th>GB%</th>
+                <th>ERA</th>
+                <th>xERA</th>
+                <th>FIP</th>
+                <th>xFIP</th>
+                <th>fWAR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>23</td>
+              <td>11</td>
+              <td>3</td>
+              <td>15</td>
+              <td>133.0</td>
+              <td>170</td>
+              <td>33.1%</td>
+              <td>6.2%</td>
+              <td>51.3%</td>
+              <td>1.96</td>
+              <td>2.50</td>
+              <td>2.44</td>
+              <td>2.54</td>
+              <td>4.3</td>
+            </tbody>
+          </table>
+          <div class="two-chart-wrapper">
+            <canvas class="chart-pie" id="skenes-pie"></canvas>
+            <canvas class="chart-bar" id="skenes-bar"></canvas>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="collapse">
-        <div class="collapse-header braves-primary">
-            <span class="collapse-title">Chris Sale - Atlanta Braves</span>
-            <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      <div class="collapse-header yankee-primary">
+        <span class="collapse-title">Luis Gil - New York Yankees</span>
+        <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
+      </div>
+      <div class="collapse-content-wrapper">
+        <div class="collapse-content">
+          <table class="mvp-table">
+            <thead class="yankee-primary">
+              <tr>
+                <th>G</th>
+                <th>QS</th>
+                <th>W</th>
+                <th>L</th>
+                <th>IP</th>
+                <th>SO</th>
+                <th>K%</th>
+                <th>BB%</th>
+                <th>GB%</th>
+                <th>ERA</th>
+                <th>xERA</th>
+                <th>FIP</th>
+                <th>xFIP</th>
+                <th>fWAR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>29</td>
+              <td>10</td>
+              <td>15</td>
+              <td>7</td>
+              <td>151.2</td>
+              <td>171</td>
+              <td>26.8%</td>
+              <td>12.1%</td>
+              <td>35.6%</td>
+              <td>3.50</td>
+              <td>3.83</td>
+              <td>4.14</td>
+              <td>4.36</td>
+              <td>2.2</td>
+            </tbody>
+          </table>
+          <div class="two-chart-wrapper">
+            <canvas class="chart-pie" id="gil-pie"></canvas>
+            <canvas class="chart-bar" id="gil-bar"></canvas>
+          </div>
         </div>
-        <div class="collapse-content-wrapper">
-            <div class="collapse-content">
-                <table class="mvp-table">
-                    <thead class="braves-primary">
-                        <tr>
-                            <th>G</th>
-                            <th>QS</th>
-                            <th>W</th>
-                            <th>L</th>
-                            <th>IP</th>
-                            <th>SO</th>
-                            <th>K%</th>
-                            <th>BB%</th>
-                            <th>GB%</th>
-                            <th>ERA</th>
-                            <th>xERA</th>
-                            <th>FIP</th>
-                            <th>xFIP</th>
-                            <th>fWAR</th>
-                          </tr>
-                    </thead>
-                    <tbody >
-                        <td>29</td>
-                        <td>18</td>
-                        <td>18</td>
-                        <td>3</td>
-                        <td>177.2</td>
-                        <td>225</td>
-                        <td>32.1%</td>
-                        <td>5.6%</td>
-                        <td>44.8%</td>
-                        <td>2.38</td>
-                        <td>2.79</td>
-                        <td>2.09</td>
-                        <td>2.64</td>
-                        <td>6.4</td>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+      </div>
     </div>
+  </body>
 
-    <div class="collapse">
-        <div class="collapse-header tigers-primary">
-            <span class="collapse-title">Tarik Skubal - Detroit Tigers</span>
-            <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
-        </div>
-        <div class="collapse-content-wrapper">
-            <div class="collapse-content">
-                <table class="mvp-table">
-                    <thead class="tigers-primary">
-                        <tr>
-                            <th>G</th>
-                            <th>QS</th>
-                            <th>W</th>
-                            <th>L</th>
-                            <th>IP</th>
-                            <th>SO</th>
-                            <th>K%</th>
-                            <th>BB%</th>
-                            <th>GB%</th>
-                            <th>ERA</th>
-                            <th>xERA</th>
-                            <th>FIP</th>
-                            <th>xFIP</th>
-                            <th>fWAR</th>
-                          </tr>
-                    </thead>
-                    <tbody >
-                        <td>31</td>
-                        <td>22</td>
-                        <td>18</td>
-                        <td>4</td>
-                        <td>192.0</td>
-                        <td>228</td>
-                        <td>30.3%</td>
-                        <td>4.6%</td>
-                        <td>45.7%</td>
-                        <td>2.39</td>
-                        <td>2.68</td>
-                        <td>2.49</td>
-                        <td>2.83</td>
-                        <td>5.1</td>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+  <script src="awards.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
 
-    <div class="award-type-header">
-        Rookie of the Year Award Winners
-    </div>
-
-    <div class="collapse">
-        <div class="collapse-header pirates-primary">
-            <span class="collapse-title">Paul Skenes - Pittsburgh Pirates</span>
-            <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
-        </div>
-        <div class="collapse-content-wrapper">
-            <div class="collapse-content">
-                <table class="mvp-table">
-                    <thead class="pirates-primary">
-                        <tr>
-                            <th>G</th>
-                            <th>QS</th>
-                            <th>W</th>
-                            <th>L</th>
-                            <th>IP</th>
-                            <th>SO</th>
-                            <th>K%</th>
-                            <th>BB%</th>
-                            <th>GB%</th>
-                            <th>ERA</th>
-                            <th>xERA</th>
-                            <th>FIP</th>
-                            <th>xFIP</th>
-                            <th>fWAR</th>
-                          </tr>
-                    </thead>
-                    <tbody >
-                        <td>23</td>
-                        <td>11</td>
-                        <td>3</td>
-                        <td>15</td>
-                        <td>133.0</td>
-                        <td>170</td>
-                        <td>33.1%</td>
-                        <td>6.2%</td>
-                        <td>51.3%</td>
-                        <td>1.96</td>
-                        <td>2.50</td>
-                        <td>2.44</td>
-                        <td>2.54</td>
-                        <td>4.3</td>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <div class="collapse">
-        <div class="collapse-header yankee-primary">
-            <span class="collapse-title">Luis Gil - New York Yankees</span>
-            <ion-icon class="collapse-icon" name="chevron-back"></ion-icon>
-        </div>
-        <div class="collapse-content-wrapper">
-            <div class="collapse-content">
-                <table class="mvp-table">
-                    <thead class="yankee-primary">
-                        <tr>
-                            <th>G</th>
-                            <th>QS</th>
-                            <th>W</th>
-                            <th>L</th>
-                            <th>IP</th>
-                            <th>SO</th>
-                            <th>K%</th>
-                            <th>BB%</th>
-                            <th>GB%</th>
-                            <th>ERA</th>
-                            <th>xERA</th>
-                            <th>FIP</th>
-                            <th>xFIP</th>
-                            <th>fWAR</th>
-                          </tr>
-                    </thead>
-                    <tbody >
-                        <td>29</td>
-                        <td>10</td>
-                        <td>15</td>
-                        <td>7</td>
-                        <td>151.2</td>
-                        <td>171</td>
-                        <td>26.8%</td>
-                        <td>12.1%</td>
-                        <td>35.6%</td>
-                        <td>3.50</td>
-                        <td>3.83</td>
-                        <td>4.14</td>
-                        <td>4.36</td>
-                        <td>2.2</td>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-
-<script src="awards.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-<footer class="footer">
+  <footer class="footer">
     <a href="https://www.fangraphs.com/">@Fangraphs</a>
-</footer>
+  </footer>
 </html>
