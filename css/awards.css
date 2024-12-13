@@ -1,3 +1,7 @@
+body {
+    padding-bottom: 50px;
+}
+
 .award-type-header {
     max-width: 85%;
     margin: 1.2em auto;
@@ -13,6 +17,7 @@
     max-width: 85%;
     margin: 1em auto;
     font-size: 16px;
+    margin-bottom: 2em;
 }
 
 .collapse-open .collapse-content-wrapper {
@@ -25,6 +30,7 @@
 
 .collapse-header {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     padding: 14px;
@@ -35,8 +41,16 @@
     color: white;
 }
 
+.header-image {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
 .collapse-title {
     font-weight: bold;
+    margin-left: 6em;
 }
 
 .collapse-icon {
@@ -130,6 +144,14 @@ th {
 
     .chart-bar {
         margin-bottom: 20px;
+    }
+
+    .header-image {
+        display: none;
+    }
+
+    .collapse-title {
+        margin-left: 0;
     }
 }
 
