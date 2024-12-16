@@ -136,10 +136,9 @@ th {
         display: none;
     }
 
+    .one-chart-wrapper,
     .two-chart-wrapper {
-        display: block;
-        align-items: center;
-        width: 100%;
+        display: none;
     } 
 
     .chart-bar {
