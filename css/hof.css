@@ -1,0 +1,12 @@
+.ballot {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.candidate-item {
+    list-style-type: none;
+    flex: 1 1 30%;
+    font-size: 1.8rem;
+    margin: 1rem .2rem; 
+}
