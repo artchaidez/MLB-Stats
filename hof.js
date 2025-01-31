@@ -3,7 +3,8 @@ const submitVotes = document.querySelector('.button-votes')
 const popup = document.querySelector(".votes-popup")
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('change', (e) => {
-    e.target.classList.add('checked')
+    const checked = e.target.classList.contains('checked');
+    checked ? e.target.classList.add('checked') : e.target.classList.remove('checked');
 }))
 
 submitVotes.addEventListener("click", (e) => {
