@@ -52,7 +52,7 @@ input[type='checkbox'] {
     align-self: center;
 }
 
-.votes-popup {
+.votes-popup, .fix-votes-popup {
     display: none;
     position: fixed;
     top: 50%;

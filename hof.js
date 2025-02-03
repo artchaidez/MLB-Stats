@@ -1,13 +1,30 @@
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const submitVotes = document.querySelector('.button-votes')
-const popup = document.querySelector(".votes-popup")
+const fixVotesPopup = document.querySelector(".fix-votes-popup")
+const validVotesPopup = document.querySelector(".votes-popup")
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('change', (e) => {
-    const checked = e.target.classList.contains('checked');
-    checked ? e.target.classList.add('checked') : e.target.classList.remove('checked');
+    const ballotChecked = e.target.classList.contains('checked');
+    ballotChecked ? e.target.classList.remove('checked') : e.target.classList.add('checked');
+
+    const totalVotes = document.querySelectorAll('.checked').length;
+
+    if (totalVotes > 10) {
+        let paragraph = document.createElement('p');
+        paragraph.textContent = "You cannot vote for more than 10 candidates. Please reconsider your votes.";
+        fixVotesPopup.appendChild(paragraph)
+        let button = document.createElement('button');
+        button.textContent = "Close"
+        button.classList.add('close-popup')
+        fixVotesPopup.appendChild(button)
+        fixVotesPopup.style.display = "flex";
+
+        e.target.checked = false;
+        e.target.classList.remove('checked')
+    } 
 }))
 
-submitVotes.addEventListener("click", (e) => {
+submitVotes.addEventListener("click", () => {    
     const votedPlayers = document.querySelectorAll('.checked');
     
     let paragraph = document.createElement('p');
@@ -19,18 +36,30 @@ submitVotes.addEventListener("click", (e) => {
     const result = playerVoted.join(", ")
     text += result;
     paragraph.textContent = text;
-    popup.appendChild(paragraph)
+    validVotesPopup.appendChild(paragraph)
 
     let button = document.createElement('button');
     button.textContent = "Close"
     button.classList.add('close-popup')
-    popup.appendChild(button)
+    validVotesPopup.appendChild(button)
 
-    popup.style.display = "flex";
+    validVotesPopup.style.display = "flex";
 });
 
-document.body.addEventListener("click", (e) => {
-    if ((e.target.classList.contains('close-popup'))) {
+fixVotesPopup.addEventListener("click", (e) => {
+    if (e.target.classList.contains("close-popup")) {
+        fixVotesPopup.style.display = "none";
+
+        const votesPopup = document.querySelector(".fix-votes-popup")
+
+        while (votesPopup.firstChild) {
+            votesPopup.removeChild(votesPopup.firstChild)
+        }
+    }
+})
+
+validVotesPopup.addEventListener("click", (e) => {
+    if (e.target.classList.contains("close-popup")) {
         const votesPopup = document.querySelector(".votes-popup");
         votesPopup.style.display = "none";
 
