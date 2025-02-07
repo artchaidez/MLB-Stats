@@ -50,21 +50,18 @@ fixVotesPopup.addEventListener("click", (e) => {
     if (e.target.classList.contains("close-popup")) {
         fixVotesPopup.style.display = "none";
 
-        const votesPopup = document.querySelector(".fix-votes-popup")
-
-        while (votesPopup.firstChild) {
-            votesPopup.removeChild(votesPopup.firstChild)
+        while (fixVotesPopup.firstChild) {
+            fixVotesPopup.removeChild(fixVotesPopup.firstChild)
         }
     }
 })
 
 validVotesPopup.addEventListener("click", (e) => {
     if (e.target.classList.contains("close-popup")) {
-        const votesPopup = document.querySelector(".votes-popup");
-        votesPopup.style.display = "none";
+        validVotesPopup.style.display = "none";
 
-        while (votesPopup.firstChild) {
-            votesPopup.removeChild(votesPopup.firstChild)
+        while (validVotesPopup.firstChild) {
+            validVotesPopup.removeChild(validVotesPopup.firstChild)
         }
 
         const votedPlayers = document.querySelectorAll('.checked');
