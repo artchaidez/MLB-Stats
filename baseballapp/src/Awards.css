@@ -1,0 +1,99 @@
+.award-type-header {
+    max-width: 85%;
+    margin: 1.2em auto;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.collapse {
+    --xy-padding: 14px;
+    --border-radius: 6px;
+    --transition-ms: 0.3s;
+
+    max-width: 85%;
+    margin: 1em auto;
+    font-size: 16px;
+    margin-bottom: 2em;
+}
+
+.collapse-open .collapse-content-wrapper {
+    grid-template-rows: 1fr;
+}
+
+.collapse-open .collapse-icon {
+    transform: rotate(-90deg);
+}
+
+.collapse-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+    user-select: none;
+    background-color: green;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    cursor: pointer;
+    color: white;
+}
+
+.header-image {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.collapse-title {
+    font-weight: bold;
+    margin-left: 6em;
+}
+
+.collapse-icon {
+    color: white;
+    transition: transform var(--transition-ms);
+}
+
+.collapse-content {
+    padding: 0 var(--xy-padding);
+    line-height: 1.4;
+    font-size: 0.85em;
+    border: 1px solid lightgray;
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.collapse-content-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--transition-ms) ease-out;
+}
+
+.mvp-table {
+    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 95%;
+}
+
+th, td {
+    padding: .2rem;
+    border: 1px solid;
+    text-align: center;
+}
+
+th {
+    color: white
+}
+
+.Dodgers-primary {
+    background-color: #1e90ff;
+}
+
+.Yankees-primary {
+    background-color: #003087;
+}
