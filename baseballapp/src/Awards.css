@@ -16,14 +16,6 @@
     margin-bottom: 2em;
 }
 
-.collapse-open .collapse-content-wrapper {
-    grid-template-rows: 1fr;
-}
-
-.collapse-open .collapse-icon {
-    transform: rotate(-90deg);
-}
-
 .collapse-header {
     display: flex;
     position: relative;
@@ -63,15 +55,10 @@
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     overflow: hidden;
     font-size: 16px;
+    transition: ease-in-out;
 }
 
-.collapse-content-wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows var(--transition-ms) ease-out;
-}
-
-.mvp-table {
+.award-table {
     margin: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -96,4 +83,16 @@ th {
 
 .Yankees-primary {
     background-color: #003087;
+}
+
+.Braves-primary {
+    background-color: #CE1141;
+}
+
+.Tigers-primary {
+    background-color: #0C2340;
+}
+
+.Pirates-primary {
+    background-color: #27251F;
 }
