@@ -41,11 +41,6 @@
     margin-left: 6em;
 }
 
-.collapse-icon {
-    color: white;
-    transition: transform var(--transition-ms);
-}
-
 .collapse-content {
     padding: 0 var(--xy-padding);
     line-height: 1.4;
@@ -95,4 +90,19 @@ th {
 
 .Pirates-primary {
     background-color: #27251F;
+}
+
+@media screen and (max-width: 1080px) {
+    th:not(:nth-child(1), :nth-child(2),:nth-child(14)),
+    td:not(:nth-child(1), :nth-child(2), :nth-child(14)) {
+        display: none;
+    }
+
+    .header-image {
+        display: none;
+    }
+
+    .collapse-title {
+        margin-left: 0;
+    }
 }
