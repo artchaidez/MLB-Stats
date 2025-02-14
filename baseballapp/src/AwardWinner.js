@@ -17,7 +17,7 @@ const AwardWinner = ({ data }) => {
         onClick={() => setOpen(!open)}
       >
         <img
-          class="header-image"
+          className="header-image"
           src={data.img}
           alt={`${data.lastName}-photo`}
         ></img>
