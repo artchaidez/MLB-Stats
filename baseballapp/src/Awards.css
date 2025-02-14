@@ -50,7 +50,6 @@
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     overflow: hidden;
     font-size: 16px;
-    transition: ease-in-out;
 }
 
 .award-table {

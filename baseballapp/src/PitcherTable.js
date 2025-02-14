@@ -26,20 +26,22 @@ const PitcherTable = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          <td>{data.games}</td>
-          <td>{data.qualityStarts}</td>
-          <td>{data.wins}</td>
-          <td>{data.loses}</td>
-          <td>{data.inningsPitched}</td>
-          <td>{data.strikeouts}</td>
-          <td>{data.bbPercentage}%</td>
-          <td>{data.kPercentage}%</td>
-          <td>{data.groundBallRate}%</td>
-          <td>{era}</td>
-          <td>{xEra}</td>
-          <td>{fip}</td>
-          <td>{xFip}</td>
-          <td>{data.fWar}</td>
+          <tr>
+            <td>{data.games}</td>
+            <td>{data.qualityStarts}</td>
+            <td>{data.wins}</td>
+            <td>{data.loses}</td>
+            <td>{data.inningsPitched}</td>
+            <td>{data.strikeouts}</td>
+            <td>{data.bbPercentage}%</td>
+            <td>{data.kPercentage}%</td>
+            <td>{data.groundBallRate}%</td>
+            <td>{era}</td>
+            <td>{xEra}</td>
+            <td>{fip}</td>
+            <td>{xFip}</td>
+            <td>{data.fWar}</td>
+          </tr>
         </tbody>
       </table>
     </div>

@@ -142,13 +142,13 @@ const Awards = () => {
 
   return (
     <>
-      <div class="award-type-header">MVP Award Winners</div>
+      <div className="award-type-header">MVP Award Winners</div>
       <AwardWinner data={ohtani} />
       <AwardWinner data={judge} />
-      <div class="award-type-header">Cy Young Award Winners</div>
+      <div className="award-type-header">Cy Young Award Winners</div>
       <AwardWinner data={sale} />
       <AwardWinner data={skubal} />
-      <div class="award-type-header">Rookie of the Year Award Winners</div>
+      <div className="award-type-header">Rookie of the Year Award Winners</div>
       <AwardWinner data={skenes} />
       <AwardWinner data={gil} />
     </>

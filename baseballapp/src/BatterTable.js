@@ -25,20 +25,22 @@ const BatterTable = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          <td>{data.games}</td>
-          <td>{data.plateApperances}</td>
-          <td>{data.homeRuns}</td>
-          <td>{data.rbis}</td>
-          <td>{data.stolenBases}</td>
-          <td>{data.bbPercentage}%</td>
-          <td>{data.kPercentage}%</td>
-          <td>{ba}</td>
-          <td>{obp}</td>
-          <td>{slg}</td>
-          <td>{data.wrcPlus}</td>
-          <td>{data.bsr}</td>
-          <td>{data.def}</td>
-          <td>{data.fWar}</td>
+          <tr>
+            <td>{data.games}</td>
+            <td>{data.plateApperances}</td>
+            <td>{data.homeRuns}</td>
+            <td>{data.rbis}</td>
+            <td>{data.stolenBases}</td>
+            <td>{data.bbPercentage}%</td>
+            <td>{data.kPercentage}%</td>
+            <td>{ba}</td>
+            <td>{obp}</td>
+            <td>{slg}</td>
+            <td>{data.wrcPlus}</td>
+            <td>{data.bsr}</td>
+            <td>{data.def}</td>
+            <td>{data.fWar}</td>
+          </tr>
         </tbody>
       </table>
     </div>
