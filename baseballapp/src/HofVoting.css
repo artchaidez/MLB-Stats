@@ -1,0 +1,112 @@
+.fieldset-ballot {
+    margin: 0 2em;
+}
+.legend-ballot {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+.ul-ballot {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.candidate-item {
+    list-style-type: none;
+    flex: 1 1 30%;
+    font-size: 1.8rem;
+    margin: 1rem .2rem; 
+}
+
+input[type='checkbox'] {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius:10em;
+    border:2px solid #555;
+}
+
+.first-year {
+    font-style: italic;
+}
+
+.final-year {
+    text-decoration: underline;
+}
+
+.voting-box {
+    display: flex;
+    justify-content:space-evenly;
+    padding: 2em;
+}
+
+.legacy {
+    font-size: 1.8rem;
+}
+
+.button-votes {
+    cursor: pointer;
+    padding: .8em 1em;
+    border-radius: 3em;
+    align-self: center;
+}
+
+.votes-popup, .fix-votes-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: orange;
+    border-radius: .3em;
+    z-index: 1000;
+    flex-direction: column;
+    font-size: 1.4em;
+}
+
+.close-popup {
+    margin-top: 2em;
+    cursor: pointer;
+    padding: .8em 1em;
+    border-radius: 3em;
+}
+
+@media screen and (max-width: 1080px){
+    .fieldset-ballot {
+        padding: 0 1em
+    }
+    
+    .candidate-item {
+        flex: 2 1 40%;
+    }
+
+    .button-votes {
+        margin-bottom: 5em;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .fieldset-ballot {
+        margin: 0 1em;
+    }
+
+    .legend-ballot {
+        padding: 1em 0;
+    }
+
+    .candidate-item {
+        flex: 1 1 100%;
+    }
+
+    .voting-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-votes {
+        margin-top: 2em;
+    }
+
+}
