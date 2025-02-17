@@ -1,23 +1,36 @@
 import "./HofVoting.css";
 import HofCandidate from "./HofCandidate";
 import { useState } from "react";
+import VotesPopup from "./VotesPopup";
+import ErrorPopup from "./ErrorPopup";
 
 const HofVoting = () => {
   const [selections, setSelections] = useState([]);
   const [showResults, setShowResults] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleSelection = (e) => {
-    if (e.target.checked) {
-      setSelections([...selections, e.target]);
+    if (selections.length >= 10) {
+      setShowError(true);
+      setSelections(selections.filter((selection) => selection !== e.target));
+      e.target.checked = false;
     } else {
-      selections.filter((selection) => selection !== e.target);
+      if (e.target.checked) {
+        setSelections([...selections, e.target]);
+      } else {
+        setSelections(selections.filter((selection) => selection !== e.target));
+      }
     }
   };
 
-  const handleCloseButton = () => {
-    selections.forEach((selection) => (selection.checked = false));
-    setSelections([]);
-    setShowResults(false);
+  const handleCloseButton = (e) => {
+    if (e.target.classList.contains("fix-votes-button")) {
+      setShowError(false);
+    } else {
+      selections.forEach((selection) => (selection.checked = false));
+      setSelections([]);
+      setShowResults(false);
+    }
   };
 
   return (
@@ -301,14 +314,14 @@ const HofVoting = () => {
       </div>
 
       {showResults && (
-        <div className="votes-popup" style={{ display: "flex" }}>
-          <p>
-            You voted for: {selections.map((selection) => selection.name).join(", ")}
-          </p>
-          <button className="close-popup" onClick={handleCloseButton}>
-            Close
-          </button>
-        </div>
+        <VotesPopup
+          selections={selections}
+          handleCloseButton={handleCloseButton}
+        />
+      )}
+
+      {showError && (
+        <ErrorPopup handleCloseButton={handleCloseButton} />
       )}
     </>
   );
