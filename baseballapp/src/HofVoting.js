@@ -40,273 +40,41 @@ const HofVoting = () => {
           2025 BBWAA HALL OF FAME BALLOT
         </legend>
         <ul className="ul-ballot">
-          <li className="candidate-item">
-            <label className="candidate-label">
-              <input
-                type="checkbox"
-                name="Bobby Abreu"
-                onClick={handleSelection}
-              />
-              Bobby Abreu
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label className="candidate-label">
-              <input
-                type="checkbox"
-                name="Carlos Beltrán"
-                onClick={handleSelection}
-              />
-              Carlos Beltrán
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label className="candidate-label">
-              <input
-                type="checkbox"
-                name="Mark Buehrle"
-                onClick={handleSelection}
-              />
-              Mark Buehrle
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label className="candidate-label">
-              <input
-                type="checkbox"
-                name="Carlos González"
-                onClick={handleSelection}
-              />
-              Carlos González
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label className="candidate-label">
-              <input
-                type="checkbox"
-                name="Curtis Granderson"
-                onClick={handleSelection}
-              />
-              Curtis Granderson
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label className="candidate-label">
-              <input
-                type="checkbox"
-                name="Félix Hernández"
-                onClick={handleSelection}
-              />
-              Félix Hernández
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label>
-              <input
-                type="checkbox"
-                name="Torii Hunter"
-                onClick={handleSelection}
-              />
-              Torii Hunter
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Adam Jones"
-                onClick={handleSelection}
-              />
-              Adam Jones
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label>
-              <input
-                type="checkbox"
-                name="Andruw Jones"
-                onClick={handleSelection}
-              />
-              Andruw Jones
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Ian Kinsler"
-                onClick={handleSelection}
-              />
-              Ian Kinsler
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Russell Martin"
-                onClick={handleSelection}
-              />
-              Russell Martin
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Brian McCann"
-                onClick={handleSelection}
-              />
-              Brian McCann
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Dustin Pedroia"
-                onClick={handleSelection}
-              />
-              Dustin Pedroia
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label>
-              <input
-                type="checkbox"
-                name="Andy Pettitte"
-                onClick={handleSelection}
-              />
-              Andy Pettitte
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Hanley Ramírez"
-                onClick={handleSelection}
-              />
-              Hanley Ramírez
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label>
-              <input
-                type="checkbox"
-                name="Manny Ramírez"
-                onClick={handleSelection}
-              />
-              Manny Ramírez
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Fernando Rodney"
-                onClick={handleSelection}
-              />
-              Fernando Rodney
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label>
-              <input
-                type="checkbox"
-                name="Álex Rodríguez"
-                onClick={handleSelection}
-              />
-              Álex Rodríguez
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label>
-              <input
-                type="checkbox"
-                name="Francisco Rodríguez"
-                onClick={handleSelection}
-              />
-              Francisco Rodríguez
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label>
-              <input
-                type="checkbox"
-                name="Jimmy Rollins"
-                onClick={handleSelection}
-              />
-              Jimmy Rollins
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="CC Sabathia"
-                onClick={handleSelection}
-              />
-              CC Sabathia
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Ichiro Suzuki"
-                onClick={handleSelection}
-              />
-              Ichiro Suzuki
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Troy Tulowitzki"
-                onClick={handleSelection}
-              />
-              Troy Tulowitzki
-            </label>
-          </li>
-          <li className="candidate-item">
-            <label>
-              <input
-                type="checkbox"
-                name="Chase Utley"
-                onClick={handleSelection}
-              />
-              Chase Utley
-            </label>
-          </li>
-          <li className="candidate-item final-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Billy Wagner"
-                onClick={handleSelection}
-              />
-              Billy Wagner
-            </label>
-          </li>
-          <li className="candidate-item first-year">
-            <label>
-              <input
-                type="checkbox"
-                name="Ben Zobrist"
-                onClick={handleSelection}
-              />
-              Ben Zobrist
-            </label>
-          </li>
+          <HofCandidate name={"Bobby Abreu"} handleSelection={handleSelection} />
+          <HofCandidate name={"Carlos Beltrán"} handleSelection={handleSelection} />
+          <HofCandidate name={"Mark Buehrle"} handleSelection={handleSelection} />
+          <HofCandidate name={"Carlos González"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Curtis Granderson"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Félix Hernández"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Torii Hunter"} handleSelection={handleSelection}/>
+          <HofCandidate name={"Adam Jones"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Andruw Jones"} handleSelection={handleSelection} />
+          <HofCandidate name={"Ian Kinsler"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Russell Martin"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Brian McCann"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Dustin Pedroia"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Andy Pettitte"} handleSelection={handleSelection} />
+          <HofCandidate name={"Hanley Ramírez"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Manny Ramírez"} handleSelection={handleSelection} />
+          <HofCandidate name={"Fernando Rodney"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Álex Rodríguez"} handleSelection={handleSelection} />
+          <HofCandidate name={"Francisco Rodríguez"} handleSelection={handleSelection} />
+          <HofCandidate name={"Jimmy Rollins"} handleSelection={handleSelection} />
+          <HofCandidate name={"CC Sabathia"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Ichiro Suzuki"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Troy Tulowitzki"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate name={"Chase Utley"} handleSelection={handleSelection} />
+          <HofCandidate name={"Omar Vizquel"} handleSelection={handleSelection} />
+          <HofCandidate name={"Billy Wagner"} handleSelection={handleSelection} year={"final-year"} />
+          <HofCandidate name={"David Wright"} handleSelection={handleSelection} />
+          <HofCandidate name={"Ben Zobrist"} handleSelection={handleSelection} year={"first-year"} />
         </ul>
       </fieldset>
 
       <div className="voting-box">
         <div>
-          <p className="first-year legacy">First Year Candidate</p>
-          <p className="final-year legacy">Final Year Candidate</p>
+          <p className="first-year legend">First Year Candidate</p>
+          <p className="final-year legend">Final Year Candidate</p>
         </div>
         <button className="button-votes" onClick={() => setShowResults(true)}>
           Submit Votes
