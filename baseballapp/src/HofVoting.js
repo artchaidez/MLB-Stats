@@ -1,6 +1,6 @@
 import "./HofVoting.css";
 import HofCandidate from "./HofCandidate";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import VotesPopup from "./VotesPopup";
 import ErrorPopup from "./ErrorPopup";
 
@@ -8,18 +8,22 @@ const HofVoting = () => {
   const [selections, setSelections] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const [showError, setShowError] = useState(false);
+  let ref = useRef(0);
 
   const handleSelection = (e) => {
-    if (selections.length >= 10) {
+    if (e.target.checked) {
+      setSelections([...selections, e.target]);
+      ref.current = ref.current + 1;
+    } else {
+      setSelections(selections.filter((selection) => selection !== e.target));
+      ref.current = ref.current - 1;
+    }
+
+    if (ref.current > 10) {
       setShowError(true);
       setSelections(selections.filter((selection) => selection !== e.target));
+      ref.current = ref.current - 1;
       e.target.checked = false;
-    } else {
-      if (e.target.checked) {
-        setSelections([...selections, e.target]);
-      } else {
-        setSelections(selections.filter((selection) => selection !== e.target));
-      }
     }
   };
 
@@ -30,6 +34,7 @@ const HofVoting = () => {
       selections.forEach((selection) => (selection.checked = false));
       setSelections([]);
       setShowResults(false);
+      ref.current = 0;
     }
   };
 
