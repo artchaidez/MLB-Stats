@@ -8,24 +8,17 @@ const HofVoting = () => {
   const [selections, setSelections] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const [showError, setShowError] = useState(false);
-  let ref = useRef(0);
 
   const handleSelection = (e) => {
-    if (e.target.checked) {
-      setSelections([...selections, e.target]);
-      ref.current = ref.current + 1;
-    } else {
-      setSelections(selections.filter((selection) => selection !== e.target));
-      ref.current = ref.current - 1;
-    }
-
-    if (ref.current > 10) {
-      setShowError(true);
-      setSelections(selections.filter((selection) => selection !== e.target));
-      ref.current = ref.current - 1;
-      e.target.checked = false;
-    }
+    e.target.checked ? setSelections([...selections, e.target]) : setSelections(selections.filter((selection) => selection !== e.target));
   };
+
+  if (selections.length > 10) {
+    setShowError(true);
+    const lastVote = selections[selections.length - 1];
+    lastVote.checked = false;
+    setSelections(selections.filter((selection) => selection !== lastVote));
+  }
 
   const handleCloseButton = (e) => {
     if (e.target.classList.contains("fix-votes-button")) {
@@ -34,7 +27,6 @@ const HofVoting = () => {
       selections.forEach((selection) => (selection.checked = false));
       setSelections([]);
       setShowResults(false);
-      ref.current = 0;
     }
   };
 

@@ -2,7 +2,7 @@
 import Awards from "./Awards";
 import Layout from "./Layout";
 import Leaders from "./Leaders"
-import HofVoting from "./HofVoting";
+import HofVoting from "./Hof/HofVoting";
 import Error from "./Error";
 import { Routes, Route } from "react-router-dom";
  
