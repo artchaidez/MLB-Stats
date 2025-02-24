@@ -3,7 +3,6 @@ const Error = () => {
   return (
     <div
       style={{
-        position: "absolute",
         textAlign: "center",
         top: "50%",
         width: "100%",

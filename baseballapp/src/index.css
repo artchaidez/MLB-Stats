@@ -9,7 +9,7 @@
   justify-content: center;
   gap: 2rem;
   list-style: none;
-  font-size: 1.4rem;
+  font-size: 1.8em;
   background-color: orange;
   padding: 0.6rem;
 }
@@ -20,19 +20,16 @@ a {
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  background-color: orange;
-  color: white;
   text-align: center;
   padding: 10px;
-  justify-self: center
 }
 
 .footer-link {
   margin: .5em;
+  color: orange;
+  font-size: 1.2em;
+  padding: 1.4em;
 }
 
 

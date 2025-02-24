@@ -1,6 +1,6 @@
 import "./HofVoting.css";
 import HofCandidate from "./HofCandidate";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import VotesPopup from "./VotesPopup";
 import ErrorPopup from "./ErrorPopup";
 
