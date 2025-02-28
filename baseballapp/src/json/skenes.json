@@ -1,0 +1,22 @@
+{
+    "firstName": "Paul",
+    "lastName": "Skenes",
+    "city": "Pittsburgh",
+    "team": "Pirates",
+    "hitter": false,
+    "img": "https://images.fangraphs.com/nobg_small_22878519.png",
+    "games": 23,
+    "qualityStarts": 11,
+    "wins": 3,
+    "loses": 15,
+    "inningsPitched": 133.0,
+    "strikeouts": 170,
+    "kPercentage": 33.1,
+    "bbPercentage": 6.2,
+    "groundBallRate": 51.2,
+    "era": 1.96,
+    "xEra": 2.5,
+    "fip": 2.44,
+    "xFip": 2.53,
+    "fWar": 4.3
+  }

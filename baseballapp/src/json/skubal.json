@@ -1,0 +1,22 @@
+{
+    "firstName": "Tarik",
+    "lastName": "Skubal",
+    "city": "Detroit",
+    "team": "Tigers",
+    "hitter": false,
+    "img": "https://images.fangraphs.com/nobg_small_22878616.png",
+    "games": 31,
+    "qualityStarts": 22,
+    "wins": 18,
+    "loses": 4,
+    "inningsPitched": 192.0,
+    "strikeouts": 228,
+    "kPercentage": 30.3,
+    "bbPercentage": 4.6,
+    "groundBallRate": 45.7,
+    "era": 2.39,
+    "xEra": 2.68,
+    "fip": 2.49,
+    "xFip": 2.83,
+    "fWar": 5.1
+  }

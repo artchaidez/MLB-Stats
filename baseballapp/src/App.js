@@ -1,8 +1,8 @@
 
-import Awards from "./Awards";
+import Awards from "./awards/Awards";
 import Layout from "./Layout";
-import Leaders from "./Leaders"
-import HofVoting from "./Hof/HofVoting";
+import Leaders from "./leaders/Leaders"
+import HofVoting from "./hof/HofVoting";
 import Error from "./Error";
 import { Routes, Route } from "react-router-dom";
  

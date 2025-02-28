@@ -1,0 +1,22 @@
+{
+    "firstName": "Aaron",
+    "lastName": "Judge",
+    "city": "New York",
+    "team": "Yankees",
+    "hitter": true,
+    "img": "https://images.fangraphs.com/nobg_small_22879706.png",
+    "games": 158,
+    "plateApperances": 704,
+    "homeRuns": 58,
+    "rbis": 144,
+    "stolenBases": 10,
+    "bbPercentage": 18.9,
+    "kPercentage": 24.3,
+    "ba": 0.322,
+    "obp": 0.458,
+    "slg": 0.701,
+    "wrcPlus": 218,
+    "bsr": -0.4,
+    "def": -9.9,
+    "fWar": 11.2
+  }

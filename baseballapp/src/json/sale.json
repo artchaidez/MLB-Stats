@@ -1,0 +1,22 @@
+{
+    "firstName": "Chris",
+    "lastName": "Sale",
+    "city": "Atlanta",
+    "team": "Braves",
+    "hitter": false,
+    "img": "https://images.fangraphs.com/nobg_small_22868979.png",
+    "games": 29,
+    "qualityStarts": 18,
+    "wins": 18,
+    "loses": 3,
+    "inningsPitched": 177.2,
+    "strikeouts": 225,
+    "kPercentage": 32.1,
+    "bbPercentage": 5.6,
+    "groundBallRate": 44.8,
+    "era": 2.38,
+    "xEra": 2.79,
+    "fip": 2.09,
+    "xFip": 2.64,
+    "fWar": 6.4
+  }

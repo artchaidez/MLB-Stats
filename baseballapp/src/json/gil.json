@@ -1,0 +1,22 @@
+{
+    "firstName": "Luis",
+    "lastName": "Gil",
+    "city": "New York",
+    "team": "Yankees",
+    "hitter": false,
+    "img": "https://images.fangraphs.com/nobg_small_23166484.png",
+    "games": 29,
+    "qualityStarts": 10,
+    "wins": 15,
+    "loses": 7,
+    "inningsPitched": 151.2,
+    "strikeouts": 171,
+    "kPercentage": 26.8,
+    "bbPercentage": 12.1,
+    "groundBallRate": 35.6,
+    "era": 3.5,
+    "xEra": 3.83,
+    "fip": 4.14,
+    "xFip": 4.36,
+    "fWar": 2.2
+  }
