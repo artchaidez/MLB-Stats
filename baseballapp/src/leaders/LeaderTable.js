@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Caret from "./Caret";
 
 const LeaderTable = ({ headerArray, tableArray }) => {
   const [sort, setSort] = useState({ keyToSort: "#", direction: "asc" });
@@ -35,7 +36,16 @@ const LeaderTable = ({ headerArray, tableArray }) => {
         <tr>
           {headerArray.map((header, index) => (
             <th key={index} onClick={() => handleHeaderClick(header)}>
-              {header.LABEL}
+              <div className="header-container">
+                {header.LABEL}
+                {header.KEY === sort.keyToSort && (
+                  <Caret
+                    direction={
+                      sort.keyToSort === header.KEY ? sort.direction : "asc"
+                    }
+                  />
+                )}
+              </div>
             </th>
           ))}
         </tr>
