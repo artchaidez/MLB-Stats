@@ -1,8 +1,8 @@
 {
-    "firstName": "Aaron",
-    "lastName": "Judge",
+    "name": "Aaron Judge",
     "city": "New York",
     "team": "Yankees",
+    "teamAcronym": "NYY",
     "hitter": true,
     "img": "https://images.fangraphs.com/nobg_small_22879706.png",
     "games": 158,
@@ -12,11 +12,11 @@
     "stolenBases": 10,
     "bbPercentage": 18.9,
     "kPercentage": 24.3,
-    "ba": 0.322,
+    "avg": 0.322,
     "obp": 0.458,
     "slg": 0.701,
-    "wrcPlus": 218,
+    "wRC+": 218,
     "bsr": -0.4,
     "def": -9.9,
-    "fWar": 11.2
+    "fWAR": 11.2
   }

@@ -1,8 +1,8 @@
 {
-    "firstName": "Shohei",
-    "lastName": "Ohtani",
+    "name": "Shohei Ohtani",
     "city": "Los Angeles",
     "team": "Dodgers",
+    "teamAcronym": "LAD",
     "hitter": true,
     "img": "https://images.fangraphs.com/nobg_small_22879333.png",
     "games": 159,
@@ -12,11 +12,11 @@
     "stolenBases": 59,
     "bbPercentage": 11.1,
     "kPercentage": 22.2,
-    "ba": 0.31,
-    "obp": 0.39,
+    "avg": 0.310,
+    "obp": 0.390,
     "slg": 0.646,
-    "wrcPlus": 181,
+    "wRC+": 181,
     "bsr": 9.8,
     "def": -17.2,
-    "fWar": 9.1
+    "fWAR": 9.1
   }

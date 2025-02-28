@@ -1,8 +1,8 @@
 {
-    "firstName": "Chris",
-    "lastName": "Sale",
+    "name": "Chris Sale",
     "city": "Atlanta",
     "team": "Braves",
+    "teamAcronym": "ATL",
     "hitter": false,
     "img": "https://images.fangraphs.com/nobg_small_22868979.png",
     "games": 29,
@@ -18,5 +18,5 @@
     "xEra": 2.79,
     "fip": 2.09,
     "xFip": 2.64,
-    "fWar": 6.4
+    "fWAR": 6.4
   }

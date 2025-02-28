@@ -19,10 +19,10 @@ const AwardWinner = ({ data }) => {
         <img
           className="header-image"
           src={data.img}
-          alt={`${data.lastName}-photo`}
+          alt={`${data.Name}-photo`}
         ></img>
         <span className="collapse-title">
-          {`${data.firstName} ${data.lastName} - ${data.city} ${data.team}`}
+          {`${data.name} - ${data.city} ${data.team}`}
         </span>
         <FontAwesomeIcon icon={faArrowLeft} style={{ transform: rotate, transition: "all 0.2s linear" }} />
       </div>

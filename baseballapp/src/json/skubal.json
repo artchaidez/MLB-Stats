@@ -1,8 +1,8 @@
 {
-    "firstName": "Tarik",
-    "lastName": "Skubal",
+    "name": "Tarik Skubal",
     "city": "Detroit",
     "team": "Tigers",
+    "teamAcronym": "DET",
     "hitter": false,
     "img": "https://images.fangraphs.com/nobg_small_22878616.png",
     "games": 31,
@@ -18,5 +18,5 @@
     "xEra": 2.68,
     "fip": 2.49,
     "xFip": 2.83,
-    "fWar": 5.1
+    "fWAR": 5.9
   }

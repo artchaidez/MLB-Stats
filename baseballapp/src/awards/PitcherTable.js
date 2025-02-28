@@ -40,7 +40,7 @@ const PitcherTable = ({ data }) => {
             <td>{xEra}</td>
             <td>{fip}</td>
             <td>{xFip}</td>
-            <td>{data.fWar}</td>
+            <td>{data.fWAR}</td>
           </tr>
         </tbody>
       </table>

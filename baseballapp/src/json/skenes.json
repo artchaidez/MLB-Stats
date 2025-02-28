@@ -1,6 +1,5 @@
 {
-    "firstName": "Paul",
-    "lastName": "Skenes",
+    "name": "Paul Skenes",
     "city": "Pittsburgh",
     "team": "Pirates",
     "hitter": false,
@@ -18,5 +17,5 @@
     "xEra": 2.5,
     "fip": 2.44,
     "xFip": 2.53,
-    "fWar": 4.3
+    "fWAR": 4.3
   }

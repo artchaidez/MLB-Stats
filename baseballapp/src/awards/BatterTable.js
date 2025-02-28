@@ -1,5 +1,5 @@
 const BatterTable = ({ data }) => {
-  const ba = Number(data.ba).toFixed(3);
+  const avg = Number(data.avg).toFixed(3);
   const obp = Number(data.obp).toFixed(3);
   const slg = Number(data.slg).toFixed(3);
 
@@ -33,13 +33,13 @@ const BatterTable = ({ data }) => {
             <td>{data.stolenBases}</td>
             <td>{data.bbPercentage}%</td>
             <td>{data.kPercentage}%</td>
-            <td>{ba}</td>
+            <td>{avg}</td>
             <td>{obp}</td>
             <td>{slg}</td>
-            <td>{data.wrcPlus}</td>
+            <td>{data["wRC+"]}</td>
             <td>{data.bsr}</td>
             <td>{data.def}</td>
-            <td>{data.fWar}</td>
+            <td>{data.fWAR}</td>
           </tr>
         </tbody>
       </table>

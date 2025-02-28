@@ -1,6 +1,5 @@
 {
-    "firstName": "Luis",
-    "lastName": "Gil",
+    "name": "Luis Gil",
     "city": "New York",
     "team": "Yankees",
     "hitter": false,
