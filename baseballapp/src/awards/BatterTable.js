@@ -8,38 +8,38 @@ const BatterTable = ({ data }) => {
       <table className="award-table">
         <thead className={`${data.team}-primary`}>
           <tr>
-            <th>G</th>
-            <th>PA</th>
-            <th>HR</th>
-            <th>RBI</th>
-            <th>SB</th>
-            <th>BB%</th>
-            <th>K%</th>
-            <th>AVG</th>
-            <th>OBP</th>
-            <th>SLG</th>
-            <th>wRC+</th>
-            <th>BsR</th>
-            <th>Def</th>
-            <th>fWAR</th>
+            <th className="award-header">G</th>
+            <th className="award-header">PA</th>
+            <th className="award-header">HR</th>
+            <th className="award-header">RBI</th>
+            <th className="award-header">SB</th>
+            <th className="award-header">BB%</th>
+            <th className="award-header">K%</th>
+            <th className="award-header">AVG</th>
+            <th className="award-header">OBP</th>
+            <th className="award-header">SLG</th>
+            <th className="award-header">wRC+</th>
+            <th className="award-header">BsR</th>
+            <th className="award-header">Def</th>
+            <th className="award-header">fWAR</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>{data.games}</td>
-            <td>{data.plateApperances}</td>
-            <td>{data.homeRuns}</td>
-            <td>{data.rbis}</td>
-            <td>{data.stolenBases}</td>
-            <td>{data.bbPercentage}%</td>
-            <td>{data.kPercentage}%</td>
-            <td>{avg}</td>
-            <td>{obp}</td>
-            <td>{slg}</td>
-            <td>{data["wRC+"]}</td>
-            <td>{data.bsr}</td>
-            <td>{data.def}</td>
-            <td>{data.fWAR}</td>
+            <td className="award-data">{data.games}</td>
+            <td className="award-data">{data.plateApperances}</td>
+            <td className="award-data">{data.homeRuns}</td>
+            <td className="award-data">{data.rbis}</td>
+            <td className="award-data">{data.stolenBases}</td>
+            <td className="award-data">{data.bbPercentage}%</td>
+            <td className="award-data">{data.kPercentage}%</td>
+            <td className="award-data">{avg}</td>
+            <td className="award-data">{obp}</td>
+            <td className="award-data">{slg}</td>
+            <td className="award-data">{data["wRC+"]}</td>
+            <td className="award-data">{data.bsr}</td>
+            <td className="award-data">{data.def}</td>
+            <td className="award-data">{data.fWAR}</td>
           </tr>
         </tbody>
       </table>

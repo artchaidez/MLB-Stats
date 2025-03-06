@@ -31,11 +31,11 @@ const LeaderTable = ({ headerArray, tableArray }) => {
   };
 
   return (
-    <table id="stats-table" className="table">
-      <thead id="stats-thead">
-        <tr>
+    <table className="leader-table">
+      <thead className="leader-thead">
+        <tr className="leader-tr">
           {headerArray.map((header, index) => (
-            <th key={index} onClick={() => handleHeaderClick(header)}>
+            <th className="leader-header" key={index} onClick={() => handleHeaderClick(header)}>
               <div className="header-container">
                 {header.LABEL}
                 {header.KEY === sort.keyToSort && (
@@ -50,14 +50,14 @@ const LeaderTable = ({ headerArray, tableArray }) => {
           ))}
         </tr>
       </thead>
-      <tbody id="stats-tbody">
+      <tbody className="leader-tbody">
         {getSortedArray(tableArray).map((row, tableIndex) => (
           <tr key={tableIndex}>
             {headerArray.map((header, index) => {
               return row[header.KEY] ? (
-                <td key={index}>{row[header.KEY]}</td>
+                <td className="leader-data" key={index}>{row[header.KEY]}</td>
               ) : (
-                <td className="fixed" key={index}>
+                <td className="fixed leader-data" key={index}>
                   {tableIndex + 1}
                 </td>
               );

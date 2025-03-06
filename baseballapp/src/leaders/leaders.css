@@ -18,6 +18,7 @@
     text-decoration: none;
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 .active-tab {
@@ -33,7 +34,7 @@
     background-color:  rgba(123, 123, 123, 0.999);
 }
 
-.table {
+.leader-table {
     border: 1px solid;
     border-collapse: collapse;
     margin-left: auto;
@@ -41,12 +42,12 @@
     width: 75%;
 }
 
-thead {
+.leader-thead {
     background-color: green;
     color: white;
 }
 
-th, td {
+.leader-header, .leader-data {
     padding: 5px;
     border: 1px solid;
 }
@@ -55,7 +56,7 @@ th, td {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 svg {
@@ -63,20 +64,20 @@ svg {
     height: 1rem;
 }
 
-th svg {
+.leader-header svg {
     max-width: 10px;
 }
 
-th svg.asc {
+.leader-header svg.asc {
     transform: rotate(0deg);
 }
 
-th svg.desc {
+.leader-header svg.desc {
     transform: rotate(180deg);
 }
 
-th:not(:nth-child(1), :nth-child(2)),
-td:not(:nth-child(1), :nth-child(2)) {
+.leader-header:not(:nth-child(1), :nth-child(2)),
+.leader-data:not(:nth-child(1), :nth-child(2)) {
     text-align: center;
 }
 
@@ -84,23 +85,23 @@ td:not(:nth-child(1), :nth-child(2)) {
     text-align: right;
 }
 
-tbody tr:hover {
+.leader-tbody .leader-tr:hover {
     background-color: rgba(123, 123, 123, 0.999);
 }
 
-thead th {
+.leader-thead .leader-header {
     cursor: pointer;
 }
 
-thead th:hover {
+.leader-thead .leader-header:hover {
     color: lightgray;
 }
 
-thead th.active {
+.leader-thead .leader-header.active {
     color: white;
 }
 
-tbody td.active {
+.leader-tbody .leader-data.active {
     color: green;
 }
 
@@ -109,21 +110,21 @@ tbody td.active {
         width: 50%;
     }
 
-    .table {
+    .leader-table {
         width: 100%;
     }
 
-    th:not(:nth-child(1), :nth-child(2), :nth-child(10)),
-    td:not(:nth-child(1), :nth-child(2), :nth-child(10)) {
+    .leader-header:not(:nth-child(1), :nth-child(2), :nth-child(10)),
+    .leader-data:not(:nth-child(1), :nth-child(2), :nth-child(10)) {
         display: none;
     }
 
-    th, td {
+    .leader-header, .leader-data {
         padding: 5px;
         border: none;
     }
 
-    tr {
+    .leader-tr {
         border: 1px solid;
     }
 }

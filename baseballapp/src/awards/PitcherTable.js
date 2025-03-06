@@ -9,38 +9,38 @@ const PitcherTable = ({ data }) => {
       <table className="award-table">
         <thead className={`${data.team}-primary`}>
           <tr>
-            <th>G</th>
-            <th>QS</th>
-            <th>W</th>
-            <th>L</th>
-            <th>IP</th>
-            <th>SO</th>
-            <th>K%</th>
-            <th>BB%</th>
-            <th>GB%</th>
-            <th>ERA</th>
-            <th>xERA</th>
-            <th>FIP</th>
-            <th>xFIP</th>
-            <th>fWAR</th>
+            <th className="award-header">G</th>
+            <th className="award-header">QS</th>
+            <th className="award-header">W</th>
+            <th className="award-header">L</th>
+            <th className="award-header">IP</th>
+            <th className="award-header">SO</th>
+            <th className="award-header">K%</th>
+            <th className="award-header">BB%</th>
+            <th className="award-header">GB%</th>
+            <th className="award-header">ERA</th>
+            <th className="award-header">xERA</th>
+            <th className="award-header">FIP</th>
+            <th className="award-header">xFIP</th>
+            <th className="award-header">fWAR</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>{data.games}</td>
-            <td>{data.qualityStarts}</td>
-            <td>{data.wins}</td>
-            <td>{data.loses}</td>
-            <td>{data.inningsPitched}</td>
-            <td>{data.strikeouts}</td>
-            <td>{data.bbPercentage}%</td>
-            <td>{data.kPercentage}%</td>
-            <td>{data.groundBallRate}%</td>
-            <td>{era}</td>
-            <td>{xEra}</td>
-            <td>{fip}</td>
-            <td>{xFip}</td>
-            <td>{data.fWAR}</td>
+            <td className="award-data">{data.games}</td>
+            <td className="award-data">{data.qualityStarts}</td>
+            <td className="award-data">{data.wins}</td>
+            <td className="award-data">{data.loses}</td>
+            <td className="award-data">{data.inningsPitched}</td>
+            <td className="award-data">{data.strikeouts}</td>
+            <td className="award-data">{data.bbPercentage}%</td>
+            <td className="award-data">{data.kPercentage}%</td>
+            <td className="award-data">{data.groundBallRate}%</td>
+            <td className="award-data">{era}</td>
+            <td className="award-data">{xEra}</td>
+            <td className="award-data">{fip}</td>
+            <td className="award-data">{xFip}</td>
+            <td className="award-data">{data.fWAR}</td>
           </tr>
         </tbody>
       </table>
