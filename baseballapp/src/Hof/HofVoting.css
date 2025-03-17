@@ -95,6 +95,10 @@ input[type='checkbox'] {
     .button-votes {
         margin-bottom: 5em;
     }
+
+    .votes-popup, .fix-votes-popup {
+        width: 35%;
+    }
 }
 
 @media screen and (max-width: 720px){
@@ -119,4 +123,7 @@ input[type='checkbox'] {
         margin-top: 2em;
     }
 
+    .votes-popup, .fix-votes-popup {
+        width: 50%;
+    }
 }
