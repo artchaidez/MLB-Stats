@@ -1,24 +1,41 @@
+import { useEffect, useState } from "react";
+
 const VotesPopup = ({ selections, handleCloseButton }) => {
-    return (
-      (selections.length > 0 ?
-        <div className="votes-popup" >
-          <p>
-            You voted for: {selections.map((selection) => selection.name).join(", ")}
-          </p>
-          <button className="close-button" onClick={handleCloseButton}>
-            Close
-          </button>
-        </div> :
-        <div className="votes-popup" >
-        <p>
-          Small hall voter I see...
-        </p>
-        <button className="close-button" onClick={handleCloseButton}>
-          Close
-        </button>
-      </div>
-      )
-    )
-}
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < selections.length) {
+      const timer = setTimeout(() => {
+        setSelectedPlayers((prevItems) => [...prevItems, selections[currentIndex]]);
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      }, 2000);
+
+      return () => clearTimeout(timer); 
+    }
+  }, [currentIndex, selections]);
+
+  const votesList = selectedPlayers.map((item, index) => (
+    <li key={index} className="votes-item">{item.name}</li>
+  ))
+
+  return selections.length > 0 ? (
+    <div className="votes-popup">
+      <p>
+        You voted for: <ul className="votes-list">{votesList}</ul>
+      </p>
+      <button className="close-button" onClick={handleCloseButton}>
+        Close
+      </button>
+    </div>
+  ) : (
+    <div className="votes-popup">
+      <p>Small hall voter I see...</p>
+      <button className="close-button" onClick={handleCloseButton}>
+        Close
+      </button>
+    </div>
+  );
+};
 
 export default VotesPopup;

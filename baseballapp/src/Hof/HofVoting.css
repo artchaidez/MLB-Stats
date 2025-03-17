@@ -55,6 +55,7 @@ input[type='checkbox'] {
 .votes-popup, .fix-votes-popup {
     display: flex;
     position: fixed;
+    width: 25%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -66,8 +67,17 @@ input[type='checkbox'] {
     font-size: 1.4em;
 }
 
+.votes-list {
+    text-align: center;
+}
+
+.votes-item {
+    list-style-type: none;
+    margin: .3em
+}
+
 .close-button {
-    margin-top: 2em;
+    margin-top: 1em;
     cursor: pointer;
     padding: .8em 1em;
     border-radius: 3em;
