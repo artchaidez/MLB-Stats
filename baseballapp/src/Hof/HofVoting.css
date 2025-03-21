@@ -1,6 +1,46 @@
+* {
+    --button-padding: .8em 1em;
+    --button-border-radius: 3em;
+}
+
+.electees {
+    width: 80%;
+    margin: auto;
+}
+
+.electees-title {
+    text-align: center;
+    margin: 1.2em;
+}
+
+.electees-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1.2em;
+}
+
+.electee-div {
+    border: 5px solid orange;
+}
+
+.electee-image {
+    border-bottom: 5px solid orange;
+}
+
+.player {
+    padding: .5em .5em .5em 1.5em;
+}
+
+.electees-description {
+    font-size: 1.5em;
+    text-align: center;
+}
+
 .fieldset-ballot {
     margin: 0 2em;
 }
+
 .legend-ballot {
     text-align: center;
     font-size: 1.5em;
@@ -47,8 +87,8 @@ input[type='checkbox'] {
 
 .button-votes {
     cursor: pointer;
-    padding: .8em 1em;
-    border-radius: 3em;
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
     align-self: center;
 }
 
@@ -79,11 +119,23 @@ input[type='checkbox'] {
 .close-button {
     margin-top: 1em;
     cursor: pointer;
-    padding: .8em 1em;
-    border-radius: 3em;
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
 }
 
 @media screen and (max-width: 1080px){
+
+    .electee-div {
+        display: flex;
+        width: 100%;
+        border: 2px solid orange;
+    }
+
+    .electee-image {
+        width: 20%;
+        border: none;
+    }
+    
     .fieldset-ballot {
         padding: 0 1em
     }
@@ -102,6 +154,7 @@ input[type='checkbox'] {
 }
 
 @media screen and (max-width: 720px){
+    
     .fieldset-ballot {
         margin: 0 1em;
     }

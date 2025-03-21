@@ -3,6 +3,7 @@ import HofCandidate from "./HofCandidate";
 import { useState } from "react";
 import VotesPopup from "./VotesPopup";
 import ErrorPopup from "./ErrorPopup";
+import Electees from "./Electees";
 
 const HofVoting = () => {
   const [selections, setSelections] = useState([]);
@@ -10,7 +11,9 @@ const HofVoting = () => {
   const [showError, setShowError] = useState(false);
 
   const handleSelection = (e) => {
-    e.target.checked ? setSelections([...selections, e.target]) : setSelections(selections.filter((selection) => selection !== e.target));
+    e.target.checked
+      ? setSelections([...selections, e.target])
+      : setSelections(selections.filter((selection) => selection !== e.target));
   };
 
   if (selections.length > 10) {
@@ -32,39 +35,140 @@ const HofVoting = () => {
 
   return (
     <>
+      <Electees />
+
       <fieldset className="fieldset-ballot">
         <legend className="legend-ballot">
           2025 BBWAA HALL OF FAME BALLOT
         </legend>
         <ul className="ul-ballot">
-          <HofCandidate name={"Bobby Abreu"} handleSelection={handleSelection} />
-          <HofCandidate name={"Carlos Beltrán"} handleSelection={handleSelection} />
-          <HofCandidate name={"Mark Buehrle"} handleSelection={handleSelection} />
-          <HofCandidate name={"Carlos González"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Curtis Granderson"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Félix Hernández"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Torii Hunter"} handleSelection={handleSelection}/>
-          <HofCandidate name={"Adam Jones"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Andruw Jones"} handleSelection={handleSelection} />
-          <HofCandidate name={"Ian Kinsler"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Russell Martin"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Brian McCann"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Dustin Pedroia"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Andy Pettitte"} handleSelection={handleSelection} />
-          <HofCandidate name={"Hanley Ramírez"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Manny Ramírez"} handleSelection={handleSelection} />
-          <HofCandidate name={"Fernando Rodney"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Álex Rodríguez"} handleSelection={handleSelection} />
-          <HofCandidate name={"Francisco Rodríguez"} handleSelection={handleSelection} />
-          <HofCandidate name={"Jimmy Rollins"} handleSelection={handleSelection} />
-          <HofCandidate name={"CC Sabathia"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Ichiro Suzuki"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Troy Tulowitzki"} handleSelection={handleSelection} year={"first-year"} />
-          <HofCandidate name={"Chase Utley"} handleSelection={handleSelection} />
-          <HofCandidate name={"Omar Vizquel"} handleSelection={handleSelection} />
-          <HofCandidate name={"Billy Wagner"} handleSelection={handleSelection} year={"final-year"} />
-          <HofCandidate name={"David Wright"} handleSelection={handleSelection} />
-          <HofCandidate name={"Ben Zobrist"} handleSelection={handleSelection} year={"first-year"} />
+          <HofCandidate
+            name={"Bobby Abreu"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Carlos Beltrán"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Mark Buehrle"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Carlos González"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Curtis Granderson"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Félix Hernández"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Torii Hunter"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Adam Jones"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Andruw Jones"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Ian Kinsler"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Russell Martin"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Brian McCann"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Dustin Pedroia"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Andy Pettitte"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Hanley Ramírez"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Manny Ramírez"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Fernando Rodney"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Álex Rodríguez"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Francisco Rodríguez"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Jimmy Rollins"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"CC Sabathia"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Ichiro Suzuki"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Troy Tulowitzki"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
+          <HofCandidate
+            name={"Chase Utley"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Omar Vizquel"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Billy Wagner"}
+            handleSelection={handleSelection}
+            year={"final-year"}
+          />
+          <HofCandidate
+            name={"David Wright"}
+            handleSelection={handleSelection}
+          />
+          <HofCandidate
+            name={"Ben Zobrist"}
+            handleSelection={handleSelection}
+            year={"first-year"}
+          />
         </ul>
       </fieldset>
 
@@ -85,9 +189,7 @@ const HofVoting = () => {
         />
       )}
 
-      {showError && (
-        <ErrorPopup handleCloseButton={handleCloseButton} />
-      )}
+      {showError && <ErrorPopup handleCloseButton={handleCloseButton} />}
     </>
   );
 };
