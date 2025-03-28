@@ -6,7 +6,6 @@ const LeaderTable = ({ headerArray, tableArray }) => {
   const [sort, setSort] = useState({ keyToSort: "#", direction: "asc" });
 
   const handleHeaderClick = (header) => {
-    console.log(header);
     setSort({
       keyToSort: header.KEY,
       direction:

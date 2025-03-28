@@ -4,7 +4,7 @@ import React from "react";
 
 const Caret = ({ direction }) => {
   return (
-    <svg className={direction}>
+    <svg className={`caret caret-${direction}`}>
       <FontAwesomeIcon icon={faArrowUp} />
     </svg>
   );

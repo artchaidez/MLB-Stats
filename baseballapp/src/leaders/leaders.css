@@ -59,20 +59,20 @@
     justify-content: space-evenly;
 }
 
-svg {
+.caret {
     width: 1rem;
     height: 1rem;
 }
 
-.leader-header svg {
+.leader-header .caret {
     max-width: 10px;
 }
 
-.leader-header svg.asc {
+.leader-header .caret-asc {
     transform: rotate(0deg);
 }
 
-.leader-header svg.desc {
+.leader-header .caret-desc {
     transform: rotate(180deg);
 }
 

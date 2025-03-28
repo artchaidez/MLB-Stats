@@ -1,7 +1,7 @@
 const HofCandidate = ({ name, handleSelection, year = "" }) => {
   return (
     <>
-      <li className={`candidate-item ${year}`}>
+      <li className={`candidate-item ${year}`} key={name}>
         <label className="candidate-label">
           <input type="checkbox" name={name} onClick={handleSelection} />
           {name}
