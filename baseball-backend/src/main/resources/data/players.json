@@ -1,0 +1,17 @@
+{
+  "players": [
+    {
+      "id": "Aaron-Judge",
+      "name": "Aaron Judge",
+      "city": "New York",
+      "team": "Yankees"
+    },
+    {
+      "id": "Juan-Soto",
+      "name": "Juan Soto",
+      "city": "New York",
+      "team": "Mets"
+    }
+
+  ]
+}

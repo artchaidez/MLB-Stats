@@ -1,0 +1,48 @@
+----------------------------------------------------------------
+Mon Mar 31 11:33:14 CDT 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-0195-ed0c-ce87-0000024131f0 
+on database directory memory:C:\Users\artch\vsCode\MLB-Stats\baseball-backend\baseball with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Users/artch/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Amazon.com Inc.
+java.runtime.version=17.0.5+8-LTS
+user.dir=C:\Users\artch\vsCode\MLB-Stats\baseball-backend
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Mar 31 11:34:14 CDT 2025:
+Shutting down instance a816c00e-0195-ed0c-ce87-0000024131f0 on database directory memory:C:\Users\artch\vsCode\MLB-Stats\baseball-backend\baseball with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa 
+----------------------------------------------------------------
+Mon Mar 31 11:34:15 CDT 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance 0963c106-0195-ed0c-ce87-0000024131f0 
+on database directory memory:C:\Users\artch\vsCode\MLB-Stats\baseball-backend\baseball with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Users/artch/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Amazon.com Inc.
+java.runtime.version=17.0.5+8-LTS
+user.dir=C:\Users\artch\vsCode\MLB-Stats\baseball-backend
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Mar 31 11:34:20 CDT 2025:
+Shutting down instance 0963c106-0195-ed0c-ce87-0000024131f0 on database directory memory:C:\Users\artch\vsCode\MLB-Stats\baseball-backend\baseball with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa 
+----------------------------------------------------------------
+Mon Mar 31 11:34:20 CDT 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a6c0c1fe-0195-ed0c-ce87-0000024131f0 
+on database directory memory:C:\Users\artch\vsCode\MLB-Stats\baseball-backend\baseball with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Users/artch/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Amazon.com Inc.
+java.runtime.version=17.0.5+8-LTS
+user.dir=C:\Users\artch\vsCode\MLB-Stats\baseball-backend
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Mar 31 11:39:31 CDT 2025:
+Shutting down instance a6c0c1fe-0195-ed0c-ce87-0000024131f0 on database directory memory:C:\Users\artch\vsCode\MLB-Stats\baseball-backend\baseball with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa 
