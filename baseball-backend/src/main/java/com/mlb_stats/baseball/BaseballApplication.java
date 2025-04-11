@@ -12,12 +12,4 @@ public class BaseballApplication {
 		SpringApplication.run(BaseballApplication.class, args);
 	}
 
-//	@Bean
-//	CommandLineRunner runner(PlayerRepository playerRepository) {
-//		return args -> {
-//			PlayerModel playerModel = new PlayerModel("Juan-Soto", "New York", "Mets" );
-//			playerRepository.save(playerModel);
-//		};
-//	}
-
 }

@@ -16,9 +16,9 @@ public class PlayerModel {
 
     }
 
-    public PlayerModel(String id, String city, String team) {
+    public PlayerModel(String id, String name, String city, String team) {
         this.id = id;
-        this.name = id.replace("-", " ");
+        this.name = name;
         this.city = city;
         this.team = team;
     }
