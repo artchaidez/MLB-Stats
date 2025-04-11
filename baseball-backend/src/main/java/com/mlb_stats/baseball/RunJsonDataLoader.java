@@ -4,6 +4,8 @@ import aj.org.objectweb.asm.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mlb_stats.baseball.hitter.HitterRepository;
 import com.mlb_stats.baseball.hitter.Hitters;
+import com.mlb_stats.baseball.pitchers.PitcherRepository;
+import com.mlb_stats.baseball.pitchers.Pitchers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -19,11 +21,13 @@ public class RunJsonDataLoader implements CommandLineRunner {
     private final ObjectMapper objectMapper;
     private final PlayerRepository playerRepository;
     private final HitterRepository hitterRepository;
+    private final PitcherRepository pitcherRepository;
 
-    public RunJsonDataLoader(ObjectMapper objectMapper, PlayerRepository playerRepository, HitterRepository hitterRepository) {
+    public RunJsonDataLoader(ObjectMapper objectMapper, PlayerRepository playerRepository, HitterRepository hitterRepository, PitcherRepository pitcherRepository) {
         this.objectMapper = objectMapper;
         this.playerRepository = playerRepository;
         this.hitterRepository = hitterRepository;
+        this.pitcherRepository = pitcherRepository;
     }
 
     @Override
@@ -50,6 +54,18 @@ public class RunJsonDataLoader implements CommandLineRunner {
             }
         } else {
             log.info("Not loading Hitters from JSON data because the collection contains data.");
+        }
+
+        if(pitcherRepository.count() == 0) {
+            try (InputStream inputStream = TypeReference.class.getResourceAsStream("/data/pitchers.json")) {
+                Pitchers pitchers = objectMapper.readValue(inputStream, Pitchers.class);
+                log.info("Reading {} pitchers from JSON data and saving to database.", pitchers.pitchers().size());
+                pitcherRepository.saveAll(pitchers.pitchers());
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to read Pitchers JSON data", e);
+            }
+        } else {
+            log.info("Not loading Pitchers from JSON data because the collection contains data.");
         }
     }
 }

@@ -18,5 +18,5 @@ public class HitterController {
     public HitterModel getHitter(@PathVariable String id) { return hitterService.getHitter(id);}
 
     @PostMapping("/hitters")
-    public void addPlayer(@RequestBody HitterModel hitter) {hitterService.addHitter(hitter);}
+    public void addHitter(@RequestBody HitterModel hitter) {hitterService.addHitter(hitter);}
 }
