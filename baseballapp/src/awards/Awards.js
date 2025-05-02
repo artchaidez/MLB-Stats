@@ -1,25 +1,19 @@
 import AwardWinner from "./AwardWinner";
 import './Awards.css';
-import ohtani from '../json/ohtani.json'
-import judge from '../json/judge.json'
-import sale from '../json/sale.json'
-import skubal from '../json/skubal.json'
-import skenes from '../json/skenes.json'
-import gil from '../json/gil.json'
 
 const Awards = () => {
 
   return (
     <>
       <div className="award-type-header">MVP Award Winners</div>
-      <AwardWinner data={ohtani} />
-      <AwardWinner data={judge} />
+      <AwardWinner name={"hitters/Shohei-Ohtani"} />
+      <AwardWinner name={"hitters/Aaron-Judge"} />
       <div className="award-type-header">Cy Young Award Winners</div>
-      <AwardWinner data={sale} />
-      <AwardWinner data={skubal} />
+      <AwardWinner name={"pitchers/Chris-Sale"} />
+      <AwardWinner name={"pitchers/Tarik-Skubal"} />
       <div className="award-type-header">Rookie of the Year Award Winners</div>
-      <AwardWinner data={skenes} />
-      <AwardWinner data={gil} />
+      <AwardWinner name={"pitchers/Paul-Skenes"} />
+      <AwardWinner name={"pitchers/Luis-Gil"} />
     </>
   );
 };
