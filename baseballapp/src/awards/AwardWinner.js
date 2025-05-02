@@ -1,14 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BatterTable from "./BatterTable";
 import PitcherTable from "./PitcherTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-const AwardWinner = ({ data }) => {
-  const [open, setOpen] = useState(false);  
+const AwardWinner = ({ name }) => {
+  const [open, setOpen] = useState(false);
+  const [data, setData] = useState({});
 
-  const rotate = open ? "rotate(-90deg)" : "rotate(0)"
-  const hitter = data.hitter;
+  const rotate = open ? "rotate(-90deg)" : "rotate(0)";
+  const url = "http://localhost:8081/" + name;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch(url);
+      const json = await result.json();
+      setData(json);
+    };
+    fetchData();
+  });
 
   return (
     <div className="collapse">
@@ -24,11 +34,17 @@ const AwardWinner = ({ data }) => {
         <span className="collapse-title">
           {`${data.name} - ${data.city} ${data.team}`}
         </span>
-        <FontAwesomeIcon icon={faArrowLeft} style={{ transform: rotate, transition: "all 0.2s linear" }} />
+        <FontAwesomeIcon
+          icon={faArrowLeft}
+          style={{ transform: rotate, transition: "all 0.2s linear" }}
+        />
       </div>
-      {open && (
-        hitter ? <BatterTable data={data}/> : <PitcherTable data={data}/>
-      )}
+      {open &&
+        (data.hitter ? (
+          <BatterTable data={data} />
+        ) : (
+          <PitcherTable data={data} />
+        ))}
     </div>
   );
 };
