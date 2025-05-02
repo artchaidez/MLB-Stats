@@ -6,8 +6,21 @@ import sale from '../json/sale.json'
 import skubal from '../json/skubal.json'
 import skenes from '../json/skenes.json'
 import gil from '../json/gil.json'
+import { useEffect } from "react";
 
 const Awards = () => {
+
+  const url = "http://localhost:8081/hitters/Shohei-Ohtani"
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch(url)
+      console.log(result.body)
+      const json = await result.json();
+      console.log(json)
+    }
+    fetchData();
+  }, [])
 
   return (
     <>
