@@ -1,20 +1,11 @@
 import "./leaders.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LeaderTable from "./LeaderTable";
-import judge from "../json/judge.json";
-import witt from "../json/witt.json";
-import ohtani from "../json/ohtani.json";
-import soto from "../json/soto.json";
-import henderson from "../json/henderson.json";
-import sale from '../json/sale.json';
-import skubal from "../json/skubal.json";
-import wheeler from "../json/wheeler.json";
-import ragans from "../json/ragans.json"
-import cease from "../json/cease.json"
-
 
 const Leaders = () => {
   const [active, setActive] = useState(0);
+  const [pitchers, setPitchers] = useState([]);
+  const [hitters, setHitters] = useState([]);
 
   const handleActiveTab = (value) => {
     setActive(value);
@@ -32,7 +23,7 @@ const Leaders = () => {
     { id: 9, KEY: "def", LABEL: "Def" },
     { id: 10, KEY: "fWAR", LABEL: "fWAR" },
   ];
-  
+
   let pitcherHeader = [
     { id: 1, KEY: "#", LABEL: "#" },
     { id: 2, KEY: "name", LABEL: "Name" },
@@ -46,19 +37,21 @@ const Leaders = () => {
     { id: 10, KEY: "fWAR", LABEL: "fWAR" },
   ];
 
-  let batterTable = [];
-  batterTable.push(judge);
-  batterTable.push(witt);
-  batterTable.push(ohtani);
-  batterTable.push(soto);
-  batterTable.push(henderson);
+  const pitchersUrl = "http://localhost:8081/pitchers";
+  const hittersUrl = "http://localhost:8081/hitters";
 
-  let pitcherTable = [];
-  pitcherTable.push(sale);
-  pitcherTable.push(skubal);
-  pitcherTable.push(wheeler);
-  pitcherTable.push(ragans);
-  pitcherTable.push(cease);
+  useEffect(() => {
+    const fetchData = async () => {
+      const pitchers = await fetch(pitchersUrl);
+      const pitchersJson = await pitchers.json();
+      setPitchers(pitchersJson);
+
+      const hitters = await fetch(hittersUrl);
+      const hittersJson = await hitters.json();
+      setHitters(hittersJson);
+    };
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -80,11 +73,11 @@ const Leaders = () => {
       </section>
 
       {active === 0 && (
-        <LeaderTable headerArray={batterHeader} tableArray={batterTable} />
+        <LeaderTable headerArray={batterHeader} tableArray={hitters} />
       )}
 
       {active === 1 && (
-        <LeaderTable headerArray={pitcherHeader} tableArray={pitcherTable} />
+        <LeaderTable headerArray={pitcherHeader} tableArray={pitchers} />
       )}
     </>
   );
