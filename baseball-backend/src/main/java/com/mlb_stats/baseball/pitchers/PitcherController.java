@@ -14,6 +14,9 @@ public class PitcherController {
     @GetMapping("/pitchers")
     public List<PitcherModel> getAllPitchers() {return pitcherService.getAllPitchers(); }
 
+    @GetMapping("/topFivePitchers")
+    public List<PitcherModel> getTopFivePitchersByfWar() {return pitcherService.getTopFivePitchersByfWar();}
+
     @GetMapping("/pitchers/{id}")
     public PitcherModel getPitcher(@PathVariable String id) { return pitcherService.getPitcher(id);}
 

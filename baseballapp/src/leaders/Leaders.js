@@ -37,7 +37,7 @@ const Leaders = () => {
     { id: 10, KEY: "fWAR", LABEL: "fWAR" },
   ];
 
-  const pitchersUrl = "http://localhost:8081/pitchers";
+  const pitchersUrl = "http://localhost:8081/topFivePitchers";
   const hittersUrl = "http://localhost:8081/hitters";
 
   useEffect(() => {

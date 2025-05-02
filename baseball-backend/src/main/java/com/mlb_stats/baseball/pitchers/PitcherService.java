@@ -18,6 +18,10 @@ public class PitcherService {
         return pitchers;
     }
 
+    public List<PitcherModel> getTopFivePitchersByfWar() {
+        return pitcherRepository.findTop5PitchersByfWar();
+    }
+
     public PitcherModel getPitcher(String id) {
         return pitcherRepository.findById(id).get();
     }
