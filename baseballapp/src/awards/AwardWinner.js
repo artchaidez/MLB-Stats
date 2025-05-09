@@ -7,6 +7,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 const AwardWinner = ({ name }) => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
 
   const rotate = open ? "rotate(-90deg)" : "rotate(0)";
   const url = "http://localhost:8081/" + name;
@@ -16,9 +17,14 @@ const AwardWinner = ({ name }) => {
       const result = await fetch(url);
       const json = await result.json();
       setData(json);
+      setLoading(false);
     };
     fetchData();
   });
+
+  if (loading) {
+    return <p></p>
+  }
 
   return (
     <div className="collapse">
