@@ -19,30 +19,17 @@ public class RunJsonDataLoader implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(RunJsonDataLoader.class);
     private final ObjectMapper objectMapper;
-    private final PlayerRepository playerRepository;
     private final HitterRepository hitterRepository;
     private final PitcherRepository pitcherRepository;
 
-    public RunJsonDataLoader(ObjectMapper objectMapper, PlayerRepository playerRepository, HitterRepository hitterRepository, PitcherRepository pitcherRepository) {
+    public RunJsonDataLoader(ObjectMapper objectMapper, HitterRepository hitterRepository, PitcherRepository pitcherRepository) {
         this.objectMapper = objectMapper;
-        this.playerRepository = playerRepository;
         this.hitterRepository = hitterRepository;
         this.pitcherRepository = pitcherRepository;
     }
 
     @Override
     public void run(String... args) {
-        if(playerRepository.count() == 0) {
-            try (InputStream inputStream = TypeReference.class.getResourceAsStream("/data/players.json")) {
-                Players players = objectMapper.readValue(inputStream, Players.class);
-                log.info("Reading {} players from JSON data and saving to database.", players.players().size());
-                playerRepository.saveAll(players.players());
-            } catch (IOException e) {
-                throw new RuntimeException("Failed to read players.json data", e);
-            }
-        } else {
-            log.info("Not loading Players from JSON data because the collection contains data.");
-        }
 
         if(hitterRepository.count() == 0) {
             try (InputStream inputStream = TypeReference.class.getResourceAsStream("/data/hitters.json")) {
