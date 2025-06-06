@@ -7,17 +7,44 @@ const VotesPopup = ({ selections, handleCloseButton }) => {
   useEffect(() => {
     if (currentIndex < selections.length) {
       const timer = setTimeout(() => {
-        setSelectedPlayers((prevItems) => [...prevItems, selections[currentIndex]]);
+        setSelectedPlayers((prevItems) => [
+          ...prevItems,
+          selections[currentIndex],
+        ]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
       }, 2000);
 
-      return () => clearTimeout(timer); 
+      return () => clearTimeout(timer);
     }
   }, [currentIndex, selections]);
 
+
+  useEffect(() => {
+    selections.forEach((player) => {
+      let playerId = player.name.replace(" ", "-");
+
+      const postSelections = async () =>
+        await fetch("http://localhost:8081/hof", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: playerId,
+            name: player.name,
+            totalVotes: 1,
+          }),
+        });
+
+        postSelections();
+    });
+  }, []);
+
   const votesList = selectedPlayers.map((item, index) => (
-    <li key={index} className="votes-item">{item.name}</li>
-  ))
+    <li key={index} className="votes-item">
+      {item.name}
+    </li>
+  ));
 
   return selections.length > 0 ? (
     <div className="votes-popup">
