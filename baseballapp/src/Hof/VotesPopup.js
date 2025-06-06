@@ -18,7 +18,6 @@ const VotesPopup = ({ selections, handleCloseButton }) => {
     }
   }, [currentIndex, selections]);
 
-
   useEffect(() => {
     selections.forEach((player) => {
       let playerId = player.name.replace(" ", "-");
@@ -36,7 +35,7 @@ const VotesPopup = ({ selections, handleCloseButton }) => {
           }),
         });
 
-        postSelections();
+      postSelections();
     });
   }, []);
 
@@ -48,9 +47,7 @@ const VotesPopup = ({ selections, handleCloseButton }) => {
 
   return selections.length > 0 ? (
     <div className="votes-popup">
-      <p>
-        You voted for: <ul className="votes-list">{votesList}</ul>
-      </p>
+      You voted for: <ul className="votes-list">{votesList}</ul>
       <button className="close-button" onClick={handleCloseButton}>
         Close
       </button>
