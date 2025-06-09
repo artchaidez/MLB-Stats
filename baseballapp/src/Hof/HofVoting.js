@@ -5,6 +5,7 @@ import VotesPopup from "./VotesPopup";
 import ErrorPopup from "./ErrorPopup";
 import Electees from "./Electees";
 import BbwaaButton from "./BbwaaButton";
+import SiteResultsButton from "./SiteResultsButton";
 
 const HofVoting = () => {
   const [selections, setSelections] = useState([]);
@@ -40,6 +41,7 @@ const HofVoting = () => {
 
       <div className="results-div">
         <BbwaaButton />
+        <SiteResultsButton />
       </div>
 
       <fieldset className="fieldset-ballot">

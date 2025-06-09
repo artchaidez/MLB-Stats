@@ -92,7 +92,7 @@ input[type="checkbox"] {
   font-size: 1.8rem;
 }
 
-.button-votes, .bbwaa-button {
+.button-votes, .bbwaa-button, .results-button {
   cursor: pointer;
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
