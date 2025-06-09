@@ -4,6 +4,7 @@ import { useState } from "react";
 import VotesPopup from "./VotesPopup";
 import ErrorPopup from "./ErrorPopup";
 import Electees from "./Electees";
+import BbwaaButton from "./BbwaaButton";
 
 const HofVoting = () => {
   const [selections, setSelections] = useState([]);
@@ -36,6 +37,10 @@ const HofVoting = () => {
   return (
     <>
       <Electees />
+
+      <div className="results-div">
+        <BbwaaButton />
+      </div>
 
       <fieldset className="fieldset-ballot">
         <legend className="legend-ballot">
@@ -171,6 +176,8 @@ const HofVoting = () => {
           />
         </ul>
       </fieldset>
+
+      
 
       <div className="voting-box">
         <div>
