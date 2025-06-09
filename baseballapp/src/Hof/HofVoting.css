@@ -115,7 +115,7 @@ input[type="checkbox"] {
   font-size: 1.4em;
 }
 
-.bbwaa-results-popup {
+.bbwaa-results-popup, .site-results-popup {
   display: flex;
   position: fixed;
   width: 90%;
@@ -130,26 +130,26 @@ input[type="checkbox"] {
   font-size: 1.4em;
 }
 
-.bbwaa-results-title {
+.bbwaa-results-title, .site-results-title {
   text-align: center;
   font-size: 1.4em;
   font-weight: bold;
   margin-bottom: 0.4em;
 }
 
-.bbwaa-results-p {
+.bbwaa-results-p, .site-results-p {
   text-align: center;
   margin-bottom: 1em;
 }
 
-.bbwaa-results-list {
+.bbwaa-results-list, .site-results-list {
   list-style-type: none;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
 }
 
-.bbwaa-results-li {
+.bbwaa-results-li, .site-results-li {
   flex: 1 1 30%;
   margin-bottom: 1em;
 }
