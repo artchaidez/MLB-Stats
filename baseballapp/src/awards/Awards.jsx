@@ -5,13 +5,13 @@ const Awards = () => {
 
   return (
     <>
-      <div className="award-type-header">MVP Award Winners</div>
+      <h1 className="award-type-heading">MVP Award Winners</h1>
       <AwardWinner name={"hitters/Shohei-Ohtani"} />
       <AwardWinner name={"hitters/Aaron-Judge"} />
-      <div className="award-type-header">Cy Young Award Winners</div>
+      <h1 className="award-type-heading">Cy Young Award Winners</h1>
       <AwardWinner name={"pitchers/Chris-Sale"} />
       <AwardWinner name={"pitchers/Tarik-Skubal"} />
-      <div className="award-type-header">Rookie of the Year Award Winners</div>
+      <h1 className="award-type-heading">Rookie of the Year Award Winners</h1>
       <AwardWinner name={"pitchers/Paul-Skenes"} />
       <AwardWinner name={"pitchers/Luis-Gil"} />
     </>

@@ -1,11 +1,11 @@
-.award-type-header {
+.award-type-heading {
     max-width: 85%;
     margin: 1.2em auto;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
-.collapse {
+.collapse-div {
     --xy-padding: 14px;
     --border-radius: 6px;
     --transition-ms: 0.3s;
@@ -61,13 +61,13 @@
     width: 95%;
 }
 
-.award-header, td {
+.award-th, td {
     padding: .2rem;
     border: 1px solid;
     text-align: center;
 }
 
-.award-header {
+.award-th {
     color: white
 }
 
@@ -92,8 +92,8 @@
 }
 
 @media screen and (max-width: 1080px) {
-    .award-header:not(:nth-child(1), :nth-child(2),:nth-child(14)),
-    .award-data:not(:nth-child(1), :nth-child(2), :nth-child(14)) {
+    .award-th:not(:nth-child(1), :nth-child(2),:nth-child(14)),
+    .award-td:not(:nth-child(1), :nth-child(2), :nth-child(14)) {
         display: none;
     }
 

@@ -27,7 +27,7 @@ const AwardWinner = ({ name }) => {
   }
 
   return (
-    <div className="collapse">
+    <div className="collapse-div">
       <div
         className={`collapse-header ${data.team}-primary`}
         onClick={() => setOpen(!open)}
