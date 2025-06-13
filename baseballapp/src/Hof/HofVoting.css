@@ -1,6 +1,7 @@
 * {
   --button-padding: 0.8em 1em;
   --button-border-radius: 3em;
+  --candidate-font-size: 1.8rem;
 }
 
 .electees {
@@ -8,7 +9,7 @@
   margin: auto;
 }
 
-.electees-title {
+.electees-h1 {
   text-align: center;
   margin: 1.2em;
 }
@@ -28,7 +29,7 @@
   border-bottom: 5px solid orange;
 }
 
-.player {
+.electee-description {
   padding: 0.5em 0.5em 0.5em 1.5em;
 }
 
@@ -37,7 +38,7 @@
   text-align: center;
 }
 
-.results-div {
+.results-div-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -76,23 +77,21 @@ input[type="checkbox"] {
 
 .first-year {
   font-style: italic;
+  font-size: var(--candidate-font-size);
 }
 
 .final-year {
   text-decoration: underline;
+  font-size: var(--candidate-font-size);
 }
 
-.voting-box {
+.voting-box-div {
   display: flex;
   justify-content: space-evenly;
   padding: 2em;
 }
 
-.legend {
-  font-size: 1.8rem;
-}
-
-.button-votes, .bbwaa-button, .results-button {
+.submit-votes-button, .bbwaa-button, .results-button {
   cursor: pointer;
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
@@ -194,7 +193,7 @@ input[type="checkbox"] {
     flex: 2 1 40%;
   }
 
-  .button-votes {
+  .submit-votes-button {
     margin-bottom: 5em;
   }
 
@@ -221,12 +220,12 @@ input[type="checkbox"] {
     flex: 1 1 100%;
   }
 
-  .voting-box {
+  .voting-box-div {
     flex-direction: column;
     align-items: center;
   }
 
-  .button-votes {
+  .submit-votes-button {
     margin-top: 2em;
   }
 

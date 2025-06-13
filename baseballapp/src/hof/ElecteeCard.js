@@ -8,7 +8,7 @@ const ElecteeCard = ({data}) => {
         src={data.img}
         alt={`${data.name}-photo`}
       />
-      <div className="player">
+      <div className="electee-description">
         <h2>{data.name}</h2>
         <h3>{data.position}</h3>
       </div>

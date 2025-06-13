@@ -39,7 +39,7 @@ const HofVoting = () => {
     <>
       <Electees />
 
-      <div className="results-div">
+      <div className="results-div-buttons">
         <BbwaaButton />
         <SiteResultsButton />
       </div>
@@ -179,14 +179,12 @@ const HofVoting = () => {
         </ul>
       </fieldset>
 
-      
-
-      <div className="voting-box">
+      <div className="voting-box-div">
         <div>
-          <p className="first-year legend">First Year Candidate</p>
-          <p className="final-year legend">Final Year Candidate</p>
+          <p className="first-year">First Year Candidate</p>
+          <p className="final-year">Final Year Candidate</p>
         </div>
-        <button className="button-votes" onClick={() => setShowResults(true)}>
+        <button className="submit-votes-button" onClick={() => setShowResults(true)}>
           Submit Votes
         </button>
       </div>

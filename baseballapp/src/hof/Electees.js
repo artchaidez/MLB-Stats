@@ -23,7 +23,7 @@ const Electees = () => {
 
   return (
     <div className="electees">
-      <h1 className="electees-title">2025 BBWAA HALL OF FAME ELECTEES</h1>
+      <h1 className="electees-h1">2025 BBWAA HALL OF FAME ELECTEES</h1>
 
       <div className="electees-container">
         <ElecteeCard data={sabathia} />
