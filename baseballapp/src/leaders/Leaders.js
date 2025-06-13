@@ -55,8 +55,8 @@ const Leaders = () => {
 
   return (
     <>
-      <section className="tabs-leaders">
-        <div className="containers-leaders">
+      <section className="leaders-section">
+        <div className="leaders-div">
           <button
             className={`leaders-tab ${active === 0 && "active-tab"}`}
             onClick={() => handleActiveTab(0)}
