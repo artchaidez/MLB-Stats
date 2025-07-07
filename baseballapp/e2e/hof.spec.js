@@ -1,71 +1,60 @@
 import { test, expect } from "@playwright/test";
+import { HofPage } from "../pages/HofPage";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("http://localhost:3000/hof");
 });
 
 test("Confirm 2025 Electees Component displaying", async ({ page }) => {
-  await expect(
-    page.locator('//div[contains(@class,"electees")]').first()
-  ).toBeVisible();
+  const Hof = new HofPage(page);
+
+  await expect(Hof.electeesComponent).toBeVisible();
 });
 
 test("Confirm BbwaaButton is displaying, shows popup on click, and can be closed", async ({
   page,
 }) => {
-  let bbwaaResultsPopup = page.locator(
-    '//*[contains(@class,"bbwaa-results-popup")]'
-  );
+  const Hof = new HofPage(page);
 
-  await page.getByRole("button", { name: "Show 2025 BBWAA Results" }).click();
+  await Hof.clickBbwaaResultsButton();
 
-  await expect(bbwaaResultsPopup).toHaveCount(1);
+  await expect(Hof.bbwaaResultsPopup).toHaveCount(1);
 
-  await page.getByRole("button", { name: "Close" }).click();
+  await Hof.clickCloseButton();
 
-  bbwaaResultsPopup = page.locator(
-    '//*[contains(@class,"bbwaa-results-popup")]'
-  );
-
-  await expect(bbwaaResultsPopup).toHaveCount(0);
+  await expect(Hof.bbwaaResultsPopup).toHaveCount(0);
 });
 
 test("Confirm SiteResultsButton is displaying, shows popup on click, and can be closed", async ({
   page,
 }) => {
-  let SiteResultsPopup = page.locator(
-    '//*[contains(@class,"site-results-popup")]'
-  );
+  const Hof = new HofPage(page);
 
-  await page.getByRole("button", { name: "Show Site Results" }).click();
+  await Hof.clickSiteResultsButton();
 
-  await expect(SiteResultsPopup).toHaveCount(1);
+  await expect(Hof.siteResultsPopup).toHaveCount(1);
 
-  await page.getByRole("button", { name: "Close" }).click();
+  await Hof.clickCloseButton();
 
-  SiteResultsPopup = page.locator('//*[contains(@class,"site-results-popup")]');
-
-  await expect(SiteResultsPopup).toHaveCount(0);
+  await expect(Hof.siteResultsPopup).toHaveCount(0);
 });
 
 test("Confirm HofCandidate component label can be clicked and vote can be submitted with VotesPopup component, then closed", async ({
   page,
 }) => {
-  await page.getByRole("checkbox", { name: "Ichiro Suzuki" }).click();
+  const Hof = new HofPage(page);
 
-  await page.getByRole("button", { name: "Submit Votes" }).click();
+  const suzuki = "Ichiro Suzuki";
 
-  let votesPopup = page.locator('//*[contains(@class,"votes-popup")]');
+  await Hof.clickOnElecteeCheckBox(suzuki);
 
-  await expect(votesPopup).toBeVisible();
+  await Hof.clickSubmitVotesButton();
 
-  await expect(
-    page.locator('//li[contains(text(),"Ichiro Suzuki")]')
-  ).toBeVisible();
+  await expect(Hof.votesPopup).toBeVisible();
 
-  await page.getByRole("button", { name: "Close" }).click();
+  await expect(Hof.returnPlayerItem(suzuki)).toBeVisible();
 
-  votesPopup = page.locator('//*[contains(@class,"votes-popup")]');
+  await Hof.clickCloseButton();
 
-  await expect(votesPopup).toHaveCount(0);
+  await expect(Hof.votesPopup).toHaveCount(0);
 });
