@@ -25,13 +25,17 @@ test('Confirm dropdown can be closed', async ({page}) => {
 
     const firstDropdown = await page.locator('//div[contains(@class, "collapse-header")]').first();
 
-    const table = await page.locator('//table[contains(@class,"award-table")]')
+    let table = await page.locator('//table[contains(@class,"award-table")]')
 
     await firstDropdown.click();
 
     await expect(table).toBeVisible();
 
+    await expect(table).toHaveCount(1);
+
     await firstDropdown.click();
+
+    table = await page.locator('//table[contains(@class,"award-table")]')
 
     await expect(table).toHaveCount(0);
     
