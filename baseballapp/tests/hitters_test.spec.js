@@ -13,7 +13,7 @@ test("Test GET /hitters Request", async ({ request }) => {
   expect(response.status()).toBe(200);
 
   const responseBody = await response.json();
-  for (let i = 0; i < responseBody.length; i++) {
+  for (let i = 0; i < correctIDs.length; i++) {
     expect(responseBody[i]).toHaveProperty("id", correctIDs[i]);
   }
 });
