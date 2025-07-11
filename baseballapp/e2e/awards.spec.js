@@ -1,53 +1,50 @@
 import { test, expect } from '@playwright/test';
+import { AwardsPage } from '../pages/awardsPage';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('http://localhost:3000/');
 });
 
 test('Find all three winner headers', async ({page}) => {
+    const awards = new AwardsPage(page);
 
-    await expect(page.locator('//h1[contains(text(),"MVP Award Winners")]')).toBeVisible();
+    await expect(awards.returnHeader("MVP Award Winners")).toBeVisible();
 
-    await expect(page.locator('//h1[contains(text(),"Cy Young Award Winners")]')).toBeVisible();
+    await expect(awards.returnHeader("Cy Young Award Winners")).toBeVisible();
 
-    await expect(page.locator('//h1[contains(text(),"Rookie of the Year Award Winners")]')).toBeVisible();
+    await expect(awards.returnHeader("Rookie of the Year Award Winners")).toBeVisible();
 });
 
 test('Click on first dropdown and confirm table exists', async ({page}) => {
+    const awards = new AwardsPage(page);
 
-    await page.locator('//div[contains(@class, "collapse-header")]').first().click();
+    await awards.dropdown.first().click();
 
-    await expect(page.locator('//table[contains(@class,"award-table")]')).toBeVisible();
+    await expect(awards.awardTable).toBeVisible();
     
 });
 
 test('Confirm dropdown can be closed', async ({page}) => {
+    const awards = new AwardsPage(page);
 
-    const firstDropdown = await page.locator('//div[contains(@class, "collapse-header")]').first();
+    await awards.clickFirstDropDown();
 
-    let table = await page.locator('//table[contains(@class,"award-table")]')
+    await expect(awards.awardTable).toBeVisible();
 
-    await firstDropdown.click();
+    await expect(awards.awardTable).toHaveCount(1);
 
-    await expect(table).toBeVisible();
+    await awards.clickFirstDropDown();
 
-    await expect(table).toHaveCount(1);
-
-    await firstDropdown.click();
-
-    table = await page.locator('//table[contains(@class,"award-table")]')
-
-    await expect(table).toHaveCount(0);
+    await expect(awards.awardTable).toHaveCount(0);
     
 });
 
 test('Confirm Ohtani is first dropdown with correct data', async ({page}) => {
+    const awards = new AwardsPage(page);
 
-    const firstDropdown = await page.locator('//div[contains(@class, "collapse-header")]').first();
+    await expect(awards.returnDropdownTitle("Shohei Ohtani - Los Angeles Dodgers")).toBeVisible();
 
-    await expect(page.locator('//span[contains(text(), "Shohei Ohtani - Los Angeles Dodgers")]')).toBeVisible();
+    await awards.clickFirstDropDown();
 
-    await firstDropdown.click();
-
-    await expect(page.locator('//td[contains(text(), "9.1")]')).toBeVisible();
+    await expect(awards.returnTableData("9.1")).toBeVisible();
 });
